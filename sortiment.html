@@ -11,10 +11,45 @@
   </head>
 </head>
 <body>
-    <div>
-        <h2>Sortiment</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nobis tenetur aperiam maiores maxime. Commodi sunt neque minus non natus asperiores iste quasi facere deleniti soluta dolor voluptates velit hic iure repellendus, molestiae unde quis fugit ex doloremque. Voluptatem nostrum blanditiis odio veritatis veniam fugit id impedit sapiente sit rerum.</p>
-    </div>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <!-- Logo / Brand -->
+              <a class="navbar-brand" href="#">
+                <img src="path/to/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                MyBrand
+              </a>
+              <!-- Toggler/collapsibe Button -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <!-- Navbar links -->
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="#login">Log In</a>
+                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#product-info">Product Info</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <!-- title -->
+    <section>
+        <div>
+            <h2>Sortiment</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nobis tenetur aperiam maiores maxime. Commodi sunt neque minus non natus asperiores iste quasi facere deleniti soluta dolor voluptates velit hic iure repellendus, molestiae unde quis fugit ex doloremque. Voluptatem nostrum blanditiis odio veritatis veniam fugit id impedit sapiente sit rerum.</p>
+        </div>
+    </section>
+
     <div class="container-fluid">
         <div class="row gy-4">
             <div class="col-sm-12 col-md-6 col-xl-4">
@@ -100,5 +135,8 @@
             
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
 </body>
 </html>
