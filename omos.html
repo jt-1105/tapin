@@ -15,7 +15,7 @@
               <!-- Logo / Brand -->
               <a class="navbar-brand" href="#">
                 <img src="path/to/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
-                MyBrand
+                Tap In
               </a>
               <!-- Toggler/collapsibe Button -->
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,14 +25,14 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="btn btn-primary" href="#login">Log In</a>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>
                     </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#about">About Us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#product-info">Product Info</a>
-                  </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#product-info">Product Info</a>
+                    </li>
                 </ul>
               </div>
             </div>
@@ -49,17 +49,59 @@
     <!--billede, beskrivelse om os-->
    <section>
         <div>
-           <a href=""></a> 
+           <a href="">
+            <img src="" alt="">
+           </a> 
         </div>
         <div>
-
+            <h2>Om os</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nobis tenetur aperiam maiores maxime. Commodi sunt neque minus non natus asperiores iste quasi facere deleniti soluta dolor voluptates velit hic iure repellendus, molestiae unde quis fugit ex doloremque. Voluptatem nostrum blanditiis odio veritatis veniam fugit id impedit sapiente sit rerum.</p>
         </div>
     </section>
 
     <!--kontakt formular, kontak info-->
     <section>
-        <Div></Div>
-        <Div></Div>
+        <Div>
+          <h2>Contact Us</h2>
+            <p>For inquiries, please reach out to us at:</p>
+            <ul>
+              <li>Email:</li>
+        </Div>
+        <Div>
+            <form>
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Your full name">
+                </div>
+                <div class="col-md-6">
+                  <label for="businessName" class="form-label">Business Name</label>
+                  <input type="text" class="form-control" id="businessName" placeholder="Your business name">
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+              </div>
+
+              <div class="mb-3">
+                <label for="position" class="form-label">Position</label>
+                <select class="form-select" id="position">
+                  <option selected disabled>Select your position</option>
+                  <option value="owner">Owner</option>
+                  <option value="manager">Manager</option>
+                </select>
+              </div> 
+
+              <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" rows="4" placeholder="How can we help you?"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+        </Div>
     </section>
 
 
