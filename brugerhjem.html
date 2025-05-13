@@ -16,9 +16,8 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid d-flex align-items-center">
 
-    <!-- LEFT WRAPPER: toggler + menu, grows to fill left side -->
+    <!-- LEFT WRAPPER -->
     <div class="d-flex align-items-center flex-grow-1">
-      <!-- small-screen toggler -->
       <button
         class="navbar-toggler d-lg-none me-2"
         type="button"
@@ -29,32 +28,28 @@
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <!-- menu items (shown on lg+; collapsed behind toggler on sm) -->
       <div class="collapse navbar-collapse d-lg-flex" id="navMenu">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav flex-row">
           <li class="nav-item"><a class="nav-link" href="#">Item 1</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Item 2</a></li>
         </ul>
       </div>
     </div>
 
-    <!-- BRAND: sits between two equal flex-grow containers -->
+    <!-- BRAND / CENTERED LOGO -->
     <a class="navbar-brand mx-3" href="#">
       <img src="path/to/logo.png" alt="Logo" height="40">
     </a>
 
-    <!-- RIGHT WRAPPER: search form + icon, grows to fill right side -->
+    <!-- RIGHT WRAPPER: search + logout -->
     <div class="d-flex align-items-center flex-grow-1 justify-content-end">
-      <!-- inline search on lg+ -->
       <form class="d-none d-lg-flex me-2" role="search">
         <input class="form-control me-2" type="search" placeholder="Search">
         <button class="btn btn-outline-primary" type="submit">Go</button>
       </form>
 
-      <!-- small-screen search toggle -->
       <button
-        class="btn d-lg-none"
+        class="btn d-lg-none me-2"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#searchBar"
@@ -63,18 +58,27 @@
         aria-label="Toggle search">
         <i class="bi bi-search fs-4"></i>
       </button>
+
+      <!-- Log Out -->
+      <button
+        id="logoutBtn"
+        class="btn btn-outline-danger"
+        type="button">
+        Log Out
+      </button>
     </div>
 
   </div>
 
-  <!-- collapsible search bar for small screens -->
+  <!-- Collapsible Search Bar (small screens) -->
   <div class="collapse" id="searchBar">
     <form class="d-flex p-3" role="search">
       <input class="form-control me-2" type="search" placeholder="Search">
       <button class="btn btn-outline-primary" type="submit">Go</button>
     </form>
   </div>
-  </nav>
+</nav>
+
 
 
   <!-- Header -->
