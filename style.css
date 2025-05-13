@@ -20,6 +20,24 @@
     --font-size-body: 16px;
 }
 
+/***************************
+        Text Styling
+***************************/
+
+h1{
+    font-family: var(--font-header);
+    font-size: var(--font-size-header);
+}
+
+h2{
+    font-family: var(--font-subheader);
+    font-size: var(--font-size-subheader);
+}
+
+p, li, a{
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+}
 
 /***************************
         B U T T O N S
@@ -41,4 +59,47 @@
     background-color: var(--beige);
     color: white;
     border: 2px solid #d4b297;
+}
+
+
+/***********************************
+        Gode råd overlay pop-up
+***********************************/
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#closeBtn:hover {
+    color: lightgray;
+}
+
+#text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
 }
