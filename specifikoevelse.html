@@ -11,7 +11,65 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid d-flex align-items-center">
 
+    <!-- LEFT WRAPPER -->
+    <div class="d-flex align-items-center flex-grow-1">
+      <button
+        class="navbar-toggler d-lg-none me-2"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMenu"
+        aria-controls="navMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse d-lg-flex" id="navMenu">
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item"><a class="nav-link" href="sortiment.html">Sortiment</a></li>
+          <li class="nav-item"><a class="nav-link" href="bartenderguide.html">Bartender Guide</a></li>
+          <li class="nav-item"><a class="nav-link" href="resurser.html">Resurser</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- BRAND / CENTERED LOGO -->
+    <a class="navbar-brand mx-3" href="#">
+      <img src="path/to/logo.png" alt="Logo" height="40">
+    </a>
+
+    <!-- RIGHT WRAPPER: search + logout -->
+    <div class="d-flex align-items-center flex-grow-1 justify-content-end">
+      <form class="d-none d-lg-flex me-2" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-primary" type="submit">Go</button>
+      </form>
+
+      <button
+        class="btn d-lg-none me-2"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#searchBar"
+        aria-controls="searchBar"
+        aria-expanded="false"
+        aria-label="Toggle search">
+        <i class="bi bi-search fs-4"></i>
+      </button>
+
+      <!-- Log Out -->
+      <button
+        id="logoutBtn"
+        class="btn"
+        type="button">
+       <a href="hjem.html"class="btn btn-outline-danger ms-2">
+          Log Out
+        </a>
+      </button>
+    </div>
+
+  </div>
     <!-- title -->
     <section>
         <div>
