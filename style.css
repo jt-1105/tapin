@@ -1,0 +1,44 @@
+/* Impot fonts fra Adobe Fonts */
+@import url("https://use.typekit.net/iuu7sdm.css");
+
+:root {
+    /* Farver */
+    --white: #FFFFFF;
+    --orange: #F19137;
+    --beige: #E0C6AC;
+    --brown: #613000;
+    --black: #000000;
+
+    /* Font Style */
+    --font-header: 'Georgia Bold', serif;
+    --font-subheader: 'Calluna Regular', serif;
+    --font-body: 'Benton Modern D Cn', serif;
+
+    /* Font Size */
+    --font-size-header: 48px;
+    --font-size-subheader: 32px;
+    --font-size-body: 16px;
+}
+
+
+/***************************
+        B U T T O N S
+***************************/
+
+.btn{
+    font-family: var(--font-body);
+}
+
+.btn-primary {
+    color: var(--beige);
+    background-color: transparent;
+    border: 2px solid var(--beige);
+    border-radius: 0px;
+    padding: 8px 16px;
+}
+
+.btn-primary:hover {
+    background-color: var(--beige);
+    color: white;
+    border: 2px solid #d4b297;
+}
