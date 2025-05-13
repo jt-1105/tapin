@@ -64,35 +64,43 @@
 <section id="feed" class="container my-5"></section>
 
 <script>
-  // 1) Load the posts.json file
+
+  // 1) Load the posts.json file and stash globally
   fetch('posts.json')
     .then(res => res.json())
-    .then(renderFeed)
+    .then(posts => {
+      window._posts = posts;    // keep for later when adding comments
+      renderFeed(posts);
+    })
     .catch(err => console.error('Failed to load posts:', err));
 
   // 2) Turn each post into a card
   function renderFeed(posts) {
     const feed = document.getElementById('feed');
+    feed.innerHTML = '';  // clear any existing content
+
     posts.forEach(post => {
       const card = document.createElement('div');
       card.className = 'card mb-4';
 
       // 2a) Build media HTML
-      const mediaHtml = post.media.map(m => {
+      const mediaHtml = (post.media || []).map(m => {
         if (m.type === 'image') {
-          return `<img src="${m.url}" class="card-img-top mb-2" alt="">`;
+          return `<img src="${m.url}" class="card-img-top mb-2" alt="Post ${post.id} image">`;
         } else {
           return `<video class="w-100 mb-2" controls src="${m.url}"></video>`;
         }
       }).join('');
 
-      // 2b) Build comments section
+      // 2b) Build comments + add-comment form
       const commentsHtml = `
-        <button class="btn btn-link px-0" data-bs-toggle="collapse" data-bs-target="#comments-${post.id}">
+        <button class="btn btn-link px-0" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#comments-${post.id}">
           Comments (${post.comments.length})
         </button>
         <div class="collapse mt-2" id="comments-${post.id}">
-          <ul class="list-group list-group-flush">
+          <ul class="list-group list-group-flush" id="comments-list-${post.id}">
             ${post.comments.map(c => `
               <li class="list-group-item">
                 <strong>${c.author}</strong>
@@ -101,22 +109,81 @@
               </li>
             `).join('')}
           </ul>
+          <form id="comment-form-${post.id}" class="mt-3">
+            <textarea class="form-control mb-2" 
+                      rows="2" 
+                      placeholder="Write a comment…" 
+                      required></textarea>
+            <button type="submit" class="btn btn-primary btn-sm">
+              Post Comment
+            </button>
+          </form>
         </div>
       `;
 
-      // 2c) Put it all together
+      // 2c) Assemble the card
       card.innerHTML = `
         <div class="card-body">
           <h5 class="card-title">${post.author}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">${new Date(post.timestamp).toLocaleString()}</h6>
+          <h6 class="card-subtitle mb-2 text-muted">
+            ${new Date(post.timestamp).toLocaleString()}
+          </h6>
           <p class="card-text">${post.content}</p>
           ${mediaHtml}
           ${commentsHtml}
         </div>
       `;
+
       feed.appendChild(card);
+
+      // 2d) Wire up the “add comment” form
+      attachCommentHandler(post.id);
     });
   }
+
+  // 3) Attach submit listener for one post’s comment form
+  function attachCommentHandler(postId) {
+    const form = document.getElementById(`comment-form-${postId}`);
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();                 // don’t reload the page
+      const textarea = form.querySelector('textarea');
+      const text = textarea.value.trim();
+      if (!text) return;                 // ignore empty
+      addCommentToPost(postId, text);
+      textarea.value = '';               // clear box
+    });
+  }
+
+  // 4) Create the comment object, update in-memory array + DOM
+  function addCommentToPost(postId, content) {
+    // Build comment
+    const comment = {
+      id: Date.now(),                   // simple unique ID
+      author: 'You',                    // fixed username; change as desired
+      content,
+      timestamp: new Date().toISOString()
+    };
+
+    // 4a) Append to our in-memory data
+    const post = window._posts.find(p => p.id === postId);
+    post.comments.push(comment);
+
+    // 4b) Append to the comments list in the DOM
+    const list = document.getElementById(`comments-list-${postId}`);
+    const li = document.createElement('li');
+    li.className = 'list-group-item';
+    li.innerHTML = `
+      <strong>${comment.author}</strong>
+      <span class="text-muted small"> — ${new Date(comment.timestamp).toLocaleTimeString()}</span>
+      <p class="mb-0">${comment.content}</p>
+    `;
+    list.appendChild(li);
+
+    // 4c) Update the Comments (…) button text
+    const btn = document.querySelector(`[data-bs-target="#comments-${postId}"]`);
+    btn.textContent = `Comments (${post.comments.length})`;
+  }
+
 </script>
 
 
