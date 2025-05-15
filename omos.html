@@ -8,79 +8,90 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-..." crossorigin="anonymous">
   <!-- Customs CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylelogin.css">
 </head>
 <body>
-<header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid d-flex align-items-center">
+<!---------
+  NAV BAR
+---------->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+<!----------
+LOGO / BRAND
+----------->
+              <a class="navbar-brand" href="hjem.html">
+                <img src="path/to/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+            
+              </a>
+<!--------------------------
+TOGGLER / COLLAPSIBLE BUTTON 
+--------------------------->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+<!----------
+NAVBAR LINKS
+----------->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hjem.html">Hjem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="omos.html">Om Os</a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
 
-      <!-- LEFT WRAPPER -->
-      <div class="d-flex align-items-center flex-grow-1">
-        <button
-          class="navbar-toggler d-lg-none me-2"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navMenu"
-          aria-controls="navMenu"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse d-lg-flex" id="navMenu">
-          <ul class="navbar-nav flex-column flex-lg-row">
-            <li class="nav-item"><a class="nav-link" href="brugerhjem.html">Hjem</a></li>
-            <li class="nav-item"><a class="nav-link" href="sortiment.html">Sortiment</a></li>
-            <li class="nav-item"><a class="nav-link" href="bartenderguide.html">Bartender Guide</a></li>
-            <li class="nav-item"><a class="nav-link" href="resurser.html">Resurser</a></li>
-          </ul>
-        </div>
+<!--------- 
+LOGIN MODAL
+---------->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form>
+              <div class="mb-3">
+                  <label for="loginEmail" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="loginEmail" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                  <label for="loginPassword" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <a class="btn btn-primary" href="brugerhjem.html">Log In</a> 
+                  <a href="#recover" class="small">Gendan Konto</a>
+              </div>
+              </form>
+          </div>
+          </div>
+      </div>
       </div>
 
-      <!-- BRAND / CENTERED LOGO -->
-      <a class="navbar-brand mx-3" href="brugerhjem.html">
-        <img src="path/to/logo.png" alt="Logo" height="40">
-      </a>
-
-      <!-- Collapsible mobile search form -->
-      <div class="collapse w-100 mt-2" id="searchBar">
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search">
-          <button class="btn btn-outline-primary" type="submit">Go</button>
-        </form>
-      </div>
-
-      <!-- RIGHT SIDE ICONS -->
-      <div class="d-flex align-items-center">
-        <!-- Search Icon -->
-        <button
-          class="btn d-lg-none me-2"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#searchBar"
-          aria-controls="searchBar"
-          aria-expanded="false"
-          aria-label="Toggle search">
-          <i class="bi bi-search fs-4"></i>
-        </button>
-
-        <!-- Profile Picture Button -->
-        <a href="profil.html" class="ms-2">
-          <img src="path/to/profile-pic.jpg" alt="Profil" height="40" class="rounded-circle">
-        </a>
-      </div>
-
-    </div>
-  </nav>
-</header>
-
-    <!--titel-->
+<!---
+TITEL
+---->
     <section>
         <div>
             <h1>Om os</h1>
         </div>
     </section>
    
-    <!--billede, beskrivelse om os-->
+<!------------------------
+BILLEDE, BESKRIVELSE OM OS
+------------------------->
    <section>
         <div>
            <a href="">
@@ -93,7 +104,9 @@
         </div>
     </section>
 
-    <!--kontakt formular, kontak info-->
+<!---------------------------
+KONTAKT FORMULAR,KONTAKT INFO
+---------------------------->
     <section>
         <Div>
           <h2>Contact Us</h2>
@@ -138,7 +151,9 @@
         </Div>
     </section>
 
-
+<!--------------
+SCRIPT BOOTSTRAP
+--------------->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
  </body>

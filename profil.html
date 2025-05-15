@@ -10,13 +10,19 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stylebruger.css">
 </head>
 <body>
+<!-------------------
+        NAV BAR
+-------------------->
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid d-flex align-items-center">
 
-      <!-- LEFT WRAPPER -->
+      <!------------
+      VENTRE WRAPPER 
+      ------------->
       <div class="d-flex align-items-center flex-grow-1">
         <button
           class="navbar-toggler d-lg-none me-2"
@@ -38,12 +44,16 @@
         </div>
       </div>
 
-      <!-- BRAND / CENTERED LOGO -->
+      <!------------------- 
+      BRAND / CENTERED LOGO
+      --------------------->
       <a class="navbar-brand mx-3" href="brugerhjem.html">
         <img src="path/to/logo.png" alt="Logo" height="40">
       </a>
 
-      <!-- Collapsible mobile search form -->
+      <!-------------------------- 
+      COLLAPSIBLE MOBILE SØGE FORM
+       -------------------------->
       <div class="collapse w-100 mt-2" id="searchBar">
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search">
@@ -51,9 +61,13 @@
         </form>
       </div>
 
-      <!-- RIGHT SIDE ICONS -->
+      <!-------------- 
+      HØJRE SIDE ICONS 
+      --------------->
       <div class="d-flex align-items-center">
-        <!-- Search Icon -->
+        <!------- 
+        SØGE ICON
+        -------->
         <button
           class="btn d-lg-none me-2"
           type="button"
@@ -65,7 +79,9 @@
           <i class="bi bi-search fs-4"></i>
         </button>
 
-        <!-- Profile Picture Button -->
+        <!-------------------- 
+        PROFILE PICTURE BUTTON
+        ---------------------->
         <a href="profil.html" class="ms-2">
           <img src="path/to/profile-pic.jpg" alt="Profil" height="40" class="rounded-circle">
         </a>
@@ -76,16 +92,27 @@
 </header>
 
 
-
+<!----------------
+PROFIL INFORMATION
+----------------->
 <main class="container mt-4">
-  <h1>Profil</h1>
-  <p>Indhold til brugerprofilen går her.</p>
+    <div>
+        <h1>Profil</h1>
+        <p>Indhold til brugerprofilen går her.</p>
+    </div>
 
-  <a href="hjem.html" class="btn btn-outline-danger mt-3">Log Out</a>
+    <!---------
+    LOG UD KNAP
+    ---------->
+    <div>
+        <a href="hjem.html" class="btn btn-outline-danger mt-3">Log Out</a>
+    </div>
 </main>
 
 
-<!-- Bootstrap JavaScript (required for collapse/toggle) -->
+<!--------------
+SCRIPT BOOTSTRAP
+--------------->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

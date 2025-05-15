@@ -10,14 +10,21 @@
 
     <!-- link til CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylebruger.css">
 
 </head>
 <body>
+
+<!-------------------
+        NAV BAR
+-------------------->
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid d-flex align-items-center">
 
-      <!-- LEFT WRAPPER -->
+      <!------------
+      VENTRE WRAPPER 
+      ------------->
       <div class="d-flex align-items-center flex-grow-1">
         <button
           class="navbar-toggler d-lg-none me-2"
@@ -39,12 +46,16 @@
         </div>
       </div>
 
-      <!-- BRAND / CENTERED LOGO -->
+      <!------------------- 
+      BRAND / CENTERED LOGO
+      --------------------->
       <a class="navbar-brand mx-3" href="brugerhjem.html">
         <img src="path/to/logo.png" alt="Logo" height="40">
       </a>
 
-      <!-- Collapsible mobile search form -->
+      <!-------------------------- 
+      COLLAPSIBLE MOBILE SØGE FORM
+       -------------------------->
       <div class="collapse w-100 mt-2" id="searchBar">
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search">
@@ -52,9 +63,13 @@
         </form>
       </div>
 
-      <!-- RIGHT SIDE ICONS -->
+      <!-------------- 
+      HØJRE SIDE ICONS 
+      --------------->
       <div class="d-flex align-items-center">
-        <!-- Search Icon -->
+        <!------- 
+        SØGE ICON
+        -------->
         <button
           class="btn d-lg-none me-2"
           type="button"
@@ -66,7 +81,9 @@
           <i class="bi bi-search fs-4"></i>
         </button>
 
-        <!-- Profile Picture Button -->
+        <!-------------------- 
+        PROFILE PICTURE BUTTON
+        ---------------------->
         <a href="profil.html" class="ms-2">
           <img src="path/to/profile-pic.jpg" alt="Profil" height="40" class="rounded-circle">
         </a>
@@ -76,15 +93,19 @@
   </nav>
 </header>
 
-  </div>
-    <!-- title (BØGER) -->
+  
+    <!-----------
+    TITEL (BØGER) 
+    ------------>
     <section>
         <div>
             <h1>Boganbefalinger</h1>
         </div>
     </section>
 
-    <!-- bog carousel BOOTSTRAP -->
+    <!-------------------
+    BOG CAROUSEL BOOTSTRAP 
+    --------------------->
     <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -128,14 +149,18 @@
       </div>
 
 
-    <!-- title (Gode råd) -->
+    <!--------------
+    TITEL (GODE RÅD)
+    --------------->
     <section>
         <div>
             <h1>Gode Råd</h1>
         </div>
     </section>
 
-    <!-- råd liste & råd pop-up -->
+<!-------------------
+RÅD LISTE & RÅD POPUP
+-------------------->
     <div id="overlay" onclick="off()">
         <button id="closeBtn" onclick="off()">✕</button>
         <div id="text">Overlay Text</div>
@@ -173,19 +198,24 @@
       </div>
     </div>
 
-    <script>
-function on(message) {
-  document.getElementById("text").textContent = message;
-  document.getElementById("overlay").style.display = "block";
-}
+<!------------
+SCRIPT OVERLAY
+-------------->
+<script>
+  function on(message) {
+    document.getElementById("text").textContent = message;
+    document.getElementById("overlay").style.display = "block";
+  }
 
-function off() {
-  document.getElementById("overlay").style.display = "none";
-}
+  function off() {
+    document.getElementById("overlay").style.display = "none";
+  }
 </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+<!--------------
+SCRIPT BOOTSTRAP
+--------------->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
 
 </body>
 </html>
