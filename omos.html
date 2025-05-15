@@ -10,65 +10,64 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <!-- Logo / Brand -->
-              <a class="navbar-brand" href="hjem.html">
-                <img src="path/to/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
-            
-              </a>
-              <!-- Toggler/collapsibe Button -->
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="omos.html">Om Os</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="hvordanbrugesdet.html">Hvordan Bruges Det</a>
-                    </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-    </header>
+<header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid d-flex align-items-center">
 
-    <!-- Login Modal -->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="loginModalLabel">Log In</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- LEFT WRAPPER -->
+        <div class="d-flex align-items-center flex-grow-1">
+          <button
+            class="navbar-toggler d-lg-none me-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navMenu"
+            aria-controls="navMenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse d-lg-flex" id="navMenu">
+            <ul class="navbar-nav flex-column flex-lg-row">
+              <li class="nav-item"><a class="nav-link" href="brugerhjem.html">Hjem</a></li>
+              <li class="nav-item"><a class="nav-link" href="sortiment.html">Sortiment</a></li>
+              <li class="nav-item"><a class="nav-link" href="bartenderguide.html">Bartender Guide</a></li>
+              <li class="nav-item"><a class="nav-link" href="resurser.html">Resurser</a></li>
+              <li class="nav-item">
+                <a href="hjem.html" class="btn btn-outline-danger ms-lg-2 mt-2 mt-lg-0">Log Out</a>
+              </li>
+            </ul>
           </div>
-          <div class="modal-body">
-              <form>
-              <div class="mb-3">
-                  <label for="loginEmail" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="loginEmail" placeholder="name@example.com">
-              </div>
-              <div class="mb-3">
-                  <label for="loginPassword" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="loginPassword" placeholder="Password">
-              </div>
-              <div class="d-flex justify-content-between align-items-center">
-                <a class="btn btn-primary" href="brugerhjem.html">Log In</a> 
-                  <a href="#recover" class="small">Gendan Konto</a>
-              </div>
-              </form>
-          </div>
-          </div>
-      </div>
-      </div>
+        </div>
 
+        <!-- BRAND / CENTERED LOGO -->
+        <a class="navbar-brand mx-3" href="brugerhjem.html">
+          <img src="path/to/logo.png" alt="Logo" height="40">
+        </a>
+
+        <!-- Collapsible mobile search form -->
+        <div class="collapse w-100 mt-2" id="searchBar">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search">
+            <button class="btn btn-outline-primary" type="submit">Go</button>
+          </form>
+        </div>
+    
+
+          <button
+            class="btn d-lg-none me-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#searchBar"
+            aria-controls="searchBar"
+            aria-expanded="false"
+            aria-label="Toggle search">
+            <i class="bi bi-search fs-4"></i>
+          </button>
+
+        </div>
+
+      </div>
+</header>
     <!--titel-->
     <section>
         <div>
