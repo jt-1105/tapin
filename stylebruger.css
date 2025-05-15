@@ -1,0 +1,80 @@
+/*****************************
+        MENU OVERLAY
+****************************/
+/* Slide-in menu */
+#sideMenu {
+  position: fixed;
+  top: 0;
+  left: -70%;
+  width: 70%;
+  height: 100%;
+  background-color: var(--beige, #E0C6AC);
+  z-index: 1050;
+  transition: left 0.3s ease-in-out;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+}
+
+/* Full screen dark overlay */
+#menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1040;
+  display: none;
+}
+
+/* Active menu & overlay */
+#sideMenu.open {
+  left: 0;
+}
+
+#menuOverlay.show {
+  display: block;
+}
+
+
+/***********************************
+        Gode råd overlay pop-up
+***********************************/
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#closeBtn:hover {
+    color: lightgray;
+}
+
+#text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+}
