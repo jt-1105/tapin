@@ -16,31 +16,20 @@
         NAV BAR
 -------------------->
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid d-flex align-items-center">
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
 
       <!------------
       VENTRE WRAPPER 
       ------------->
-      <div class="d-flex align-items-center flex-grow-1">
+      <div class="d-flex align-items-center">
         <button
-          class="navbar-toggler d-lg-none me-2"
+          class="btn d-lg-none me-2"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navMenu"
-          aria-controls="navMenu"
-          aria-expanded="false"
+          id="menuToggle"
           aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <i class="bi bi-list fs-2"></i>
         </button>
-        <div class="collapse navbar-collapse d-lg-flex" id="navMenu">
-          <ul class="navbar-nav flex-column flex-lg-row">
-            <li class="nav-item"><a class="nav-link" href="brugerhjem.html">Hjem</a></li>
-            <li class="nav-item"><a class="nav-link" href="sortiment.html">Sortiment</a></li>
-            <li class="nav-item"><a class="nav-link" href="bartenderguide.html">Bartender Guide</a></li>
-            <li class="nav-item"><a class="nav-link" href="resurser.html">Resurser</a></li>
-          </ul>
-        </div>
       </div>
 
       <!------------------- 
@@ -49,16 +38,6 @@
       <a class="navbar-brand mx-3" href="brugerhjem.html">
         <img src="path/to/logo.png" alt="Logo" height="40">
       </a>
-
-      <!-------------------------- 
-      COLLAPSIBLE MOBILE SØGE FORM
-       -------------------------->
-      <div class="collapse w-100 mt-2" id="searchBar">
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search">
-          <button class="btn btn-outline-primary" type="submit">Go</button>
-        </form>
-      </div>
 
       <!-------------- 
       HØJRE SIDE ICONS 
@@ -85,9 +64,31 @@
           <img src="path/to/profile-pic.jpg" alt="Profil" height="40" class="rounded-circle">
         </a>
       </div>
-
     </div>
   </nav>
+
+  <!-------------------------- 
+  COLLAPSIBLE MOBILE SØGE FORM
+  -------------------------->
+  <div class="collapse w-100 mt-2" id="searchBar">
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-primary" type="submit">Go</button>
+    </form>
+  </div>
+
+  <!----------
+  NAVBAR LINKS
+  ----------->
+  <div id="sideMenu" class="d-lg-none">
+    <ul class="nav flex-column p-4">
+      <li class="nav-item"><a class="nav-link" href="brugerhjem.html">Hjem</a></li>
+      <li class="nav-item"><a class="nav-link" href="sortiment.html">Sortiment</a></li>
+      <li class="nav-item"><a class="nav-link" href="bartenderguide.html">Bartender Guide</a></li>
+      <li class="nav-item"><a class="nav-link" href="resurser.html">Resurser</a></li>
+    </ul>
+  </div>
+  <div id="menuOverlay" class="d-lg-none"></div>
 </header>
 
 <!----------
