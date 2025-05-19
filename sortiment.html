@@ -18,18 +18,31 @@
   <!-------------------
           NAV BAR
   -------------------->
-  <nav class="navbar navbar-light bg-light navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg" style="background-color: var(--beige) !important;">
     <div class="container-fluid">
+
       <!----------------
-      OFFCANVAS TOGGLER
+      OFFCANVAS TOGGLER (mobile only)
       ---------------->
-      <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+      <button class="btn d-lg-none" type="button"
+              data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+              aria-controls="offcanvasMenu">
         <i class="bi bi-list fs-2"></i>
       </button>
 
-      <!------------------- 
+      <!-------------------
+      DESKTOP NAV LINKS
+      -------------------->
+      <ul class="navbar-nav me-auto d-none d-lg-flex">
+        <li class="nav-item"><a class="nav-link" href="brugerhjem.html">Hjem</a></li>
+        <li class="nav-item"><a class="nav-link" href="sortiment.html">Sortiment</a></li>
+        <li class="nav-item"><a class="nav-link" href="bartenderguide.html">Bartender Guide</a></li>
+        <li class="nav-item"><a class="nav-link" href="resurser.html">Resurser</a></li>
+      </ul>
+
+      <!-------------------
       BRAND / LOGO
-      --------------------->
+      -------------------->
       <a class="navbar-brand mx-auto mx-lg-0" href="brugerhjem.html">
         <img src="path/to/logo.png" alt="Logo" height="40">
       </a>
@@ -45,15 +58,13 @@
           <button class="btn" id="searchDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="bi bi-search fs-4"></i>
           </button>
-          <div class="dropdown-menu dropdown-menu-end p-3" aria-labelledby="searchDropdown">
+          <div class="dropdown-menu dropdown-menu-end p-3">
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search">
-              <!-- styled via your style.css .btn-primary rules -->
               <button class="btn btn-primary" type="submit">Go</button>
             </form>
           </div>
         </div>
-
         <!-------------------- 
         PROFILE PICTURE BUTTON
         ---------------------->
@@ -66,11 +77,14 @@
 
   <!------------
   OFFCANVAS MENU
+  (mobile only)
   ------------>
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+  <div class="offcanvas offcanvas-start d-lg-none"
+       tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
       <!-------------------

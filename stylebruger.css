@@ -1,21 +1,67 @@
-
-/***********************
-  NAVIGATION BAR
-***********************/
-.navbar-brand {
-    position: absolute;         
-    left: 50%;                  
-    transform: translateX(-50%);
-  }
-
-nav.navbar {
+/********************************************
+  1) Navbar & Offcanvas Background (all sizes)
+********************************************/
+nav.navbar,
+.offcanvas {
   background-color: var(--beige) !important;
 }
 
-.offcanvas {
-  background-color: var(--beige);
+/*Make all nav links white by default (removes the blue)*/
+.navbar-nav .nav-link,
+.offcanvas .nav-link {
+  color: var(--white) !important;
+  transition: font-size 0.15s ease, font-weight 0.15s ease;
 }
 
+/*On “click” (and keyboard focus) bump size + weight*/
+.navbar-nav .nav-link,
+.offcanvas .nav-link {
+  color: var(--white) !important;
+  transition: font-size 0.15s ease, font-weight 0.15s ease;
+}
+
+
+/*Center logo on mobile, desktop*/
+
+.navbar-brand {
+  position: relative;
+}
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0; /* override any auto-margins */
+}
+
+/*Offcanvas toggle & panel: mobile only*/
+
+@media (min-width: 992px) {
+ 
+  .btn[data-bs-toggle="offcanvas"] {
+    display: none !important;
+  }
+  
+  .offcanvas {
+    display: none !important;
+  }
+}
+
+/*Desktop nav-links inline, white/brown colors*/
+
+@media (min-width: 992px) {
+  
+  .navbar-nav.d-lg-flex .nav-link {
+    color: var(--white) !important;
+    padding: 0.5rem 0.75rem;
+  }
+  .navbar-nav.d-lg-flex .nav-link:hover {
+    color: var(--brown) !important;
+  }
+}
+
+/********************************************
+  5) “Gode råd” overlay pop-up 
+********************************************/
 #overlay {
   position: fixed;
   display: none;
