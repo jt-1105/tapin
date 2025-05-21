@@ -112,49 +112,46 @@
     </section>
 
     <!-------------------
-    BOG CAROUSEL BOOTSTRAP 
-    --------------------->
-    <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="" class="d-block w-100" alt="">
-                <h2>Bog title</h2>
-                <button type="button" class="btn btn-primary">Download e-bog</button>
-            </div>
-    
-            <div class="carousel-item">
-                <img src="" class="d-block w-100" alt="">
-                <h2>Bog title</h2>
-                <button type="button" class="btn btn-primary">Download e-bog</button>
-            </div>
-    
-            <div class="carousel-item">
-                <img src="" class="d-block w-100" alt="">
-                <h2>Bog title</h2>
-                <button type="button" class="btn btn-primary">Download e-bog</button>
-            </div>
-    
-            <div class="carousel-item">
-                <img src="" class="d-block w-100" alt="">
-                <h2>Bog title</h2>
-                <button type="button" class="btn btn-primary">Download e-bog</button>
-            </div>
-    
-            <div class="carousel-item">
-                <img src="" class="d-block w-100" alt="">
-                <h2>Bog title</h2>
-                <button type="button" class="btn btn-primary">Download e-bog</button>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+BØGER CAROUSEL
+-------------------->
+<section class="carousel-wrapper">
+  <button class="arrow left" onclick="moveCarousel(-1)">&#9664;</button>
+
+  <div id="carousel">
+    <div class="item">
+      <img class="img-fluid" src="images/books/book1.jpg">
+      <h2 class="title">The Oxford Companion to Spirits and Cocktails</h2>
+      <p class="author">af David Wondrich et al.</p>
+      <button type="button" class="btn btn-primary">Download e-bog</button>
+    </div>
+    <div class="item">
+      <img class="img-fluid" src="images/books/book2.jpg">
+      <h2 class="title">The Drunken Botanist</h2>
+      <p class="author">af Amy Stewart</p>
+      <button type="button" class="btn btn-primary">Download e-bog</button>
+    </div>
+    <div class="item">
+      <img class="img-fluid" src="images/books/book3.jpg">
+      <h2 class="title">Shaken</h2>
+      <p class="author">af Ian Fleming</p>
+      <button type="button" class="btn btn-primary">Download e-bog</button>
+    </div>
+    <div class="item">
+      <img class="img-fluid" src="images/books/book4.jpg">
+      <h2 class="title">Tequila Mockingbird</h2>
+      <p class="author">af Tim Federle</p>
+      <button type="button" class="btn btn-primary">Download e-bog</button>
+    </div>
+    <div class="item">
+      <img class="img-fluid" src="images/books/book5.jpg">
+      <h2 class="title">The Joy of Mixology</h2>
+      <p class="author">af Gary Regan</p>
+      <button type="button" class="btn btn-primary">Download e-bog</button>
+    </div>
+  </div>
+
+  <button class="arrow right" onclick="moveCarousel(1)">&#9654;</button>
+</section>
 
 
     <!--------------
@@ -210,6 +207,7 @@ RÅD LISTE & RÅD POPUP
 SCRIPT OVERLAY
 -------------->
 <script>
+  //  script til overlay
   function on(message) {
     document.getElementById("text").textContent = message;
     document.getElementById("overlay").style.display = "block";
@@ -217,6 +215,19 @@ SCRIPT OVERLAY
 
   function off() {
     document.getElementById("overlay").style.display = "none";
+  }
+
+  //  script til previous next knap af bøger carousel
+  let position = 3;
+  const totalItems = 5;
+
+  function moveCarousel(direction) {
+    position += direction;
+
+    if (position < 1) position = totalItems;
+    if (position > totalItems) position = 1;
+
+    document.getElementById('carousel').style.setProperty('--position', position);
   }
 </script>
 <!--------------
