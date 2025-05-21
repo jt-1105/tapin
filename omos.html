@@ -119,73 +119,72 @@
 <!---
 TITEL
 ---->
-    <section>
-        <div>
-            <h1>Om os</h1>
-        </div>
-    </section>
+    <section class="page-header">
+    <div class="page-header__inner">
+      <h1>Om os</h1>
+    </div>
+  </section>
    
 <!------------------------
 BILLEDE, BESKRIVELSE OM OS
 ------------------------->
-   <section>
-        <div>
-           <a href="">
-            <img src="" alt="">
-           </a> 
-        </div>
-        <div>
-            <h2>Om os</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nobis tenetur aperiam maiores maxime. Commodi sunt neque minus non natus asperiores iste quasi facere deleniti soluta dolor voluptates velit hic iure repellendus, molestiae unde quis fugit ex doloremque. Voluptatem nostrum blanditiis odio veritatis veniam fugit id impedit sapiente sit rerum.</p>
-        </div>
-    </section>
+   <section class="about-section">
+    <div class="about-section__image">
+      <a href="https://example.com/post5" target="_blank">
+        <img src="https://picsum.photos/1900/1200" alt="Placeholder">
+      </a>
+    </div>
+    <div class="about-section__content">
+      <h2>Om os</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nobis tenetur aperiam maiores maxime.
+        Commodi sunt neque minus non natus asperiores iste quasi facere deleniti soluta dolor voluptates velit hic
+        iure repellendus, molestiae unde quis fugit ex doloremque. Voluptatem nostrum blanditiis odio veritatis veniam
+        fugit id impedit sapiente sit rerum.
+      </p>
+    </div>
+  </section>
 
 <!---------------------------
 KONTAKT FORMULAR,KONTAKT INFO
 ---------------------------->
-    <section>
-        <Div>
-          <h2>Contact Us</h2>
-            <p>For inquiries, please reach out to us at:</p>
-            <ul>
-              <li>Email:</li>
-        </Div>
-        <Div>
-            <form>
-              <div class="row mb-3">
-                <div class="col-md-6">
-                  <label for="name" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="name" placeholder="Your full name">
-                </div>
-                <div class="col-md-6">
-                  <label for="businessName" class="form-label">Business Name</label>
-                  <input type="text" class="form-control" id="businessName" placeholder="Your business name">
-                </div>
-              </div>
-
-              <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" placeholder="name@example.com">
-              </div>
-
-              <div class="mb-3">
-                <label for="position" class="form-label">Position</label>
-                <select class="form-select" id="position">
-                  <option selected disabled>Select your position</option>
-                  <option value="owner">Owner</option>
-                  <option value="manager">Manager</option>
-                </select>
-              </div> 
-
-              <div class="mb-3">
-                <label for="description" class="form-label">Description</label>
-                <textarea class="form-control" id="description" rows="4" placeholder="How can we help you?"></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary">Send</button>
-            </form>
-        </Div>
-    </section>
+    <section class="contact-section">
+    <div class="contact-section__info">
+      <h2>Contact Us</h2>
+      <p>For inquiries, please reach out using the contact form below.</p>
+    </div>
+    <div class="contact-section__form container-formomos">
+      <form>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Your full name">
+          </div>
+          <div class="col-md-6">
+            <label for="businessName" class="form-label">Business Name</label>
+            <input type="text" class="form-control" id="businessName" placeholder="Your business name">
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="position" class="form-label">Position</label>
+          <select class="form-select" id="position">
+            <option selected disabled>Select your position</option>
+            <option value="owner">Owner</option>
+            <option value="manager">Manager</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea class="form-control" id="description" rows="4" placeholder="How can we help you?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+  </section>
 
 <!--------------
 SCRIPT BOOTSTRAP
