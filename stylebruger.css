@@ -1,3 +1,11 @@
+/*************************
+        
+**************************/
+main{
+    margin: 50px;
+}
+
+
 /*****************************
         MENU OVERLAY
 ****************************/
@@ -12,13 +20,73 @@
   transition: left 0.3s ease-in-out;
   overflow-y: auto;
   box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+/********************************************
+  1) Navbar & Offcanvas Background (all sizes)
+********************************************/
+nav.navbar,
+.offcanvas {
+  background-color: var(--beige) !important;
 }
 
-/* Full screen dark overlay */
-#menuOverlay {
+/*Make all nav links white by default (removes the blue)*/
+.navbar-nav .nav-link,
+.offcanvas .nav-link {
+  color: var(--white) !important;
+  transition: font-size 0.15s ease, font-weight 0.15s ease;
+}
+
+/*On “click” (and keyboard focus) bump size + weight*/
+.navbar-nav .nav-link,
+.offcanvas .nav-link {
+  color: var(--white) !important;
+  transition: font-size 0.15s ease, font-weight 0.15s ease;
+}
+
+
+/*Center logo on mobile, desktop*/
+
+.navbar-brand {
+  position: relative;
+}
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0; /* override any auto-margins */
+}
+
+/*Offcanvas toggle & panel: mobile only*/
+
+@media (min-width: 992px) {
+ 
+  .btn[data-bs-toggle="offcanvas"] {
+    display: none !important;
+  }
+  
+  .offcanvas {
+    display: none !important;
+  }
+}
+
+/*Desktop nav-links inline, white/brown colors*/
+
+@media (min-width: 992px) {
+  
+  .navbar-nav.d-lg-flex .nav-link {
+    color: var(--white) !important;
+    padding: 0.5rem 0.75rem;
+  }
+  .navbar-nav.d-lg-flex .nav-link:hover {
+    color: var(--brown) !important;
+  }
+}
+
+/********************************************
+  5) “Gode råd” overlay pop-up 
+********************************************/
+#overlay {
   position: fixed;
-  top: 0;
-  left: 0;
+  display: none;
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.5);
@@ -39,7 +107,6 @@
 /***********************************
         Gode råd overlay pop-up
 ***********************************/
-
 #overlay {
     position: fixed;
     display: none;
@@ -52,23 +119,23 @@
     background-color: rgba(0,0,0,0.5);
     z-index: 2;
     cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
 }
 
 #closeBtn {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 30px;
-    color: white;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    z-index: 3;
+  position: absolute;
+  top: 20px; right: 30px;
+  font-size: 30px;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
 }
-
-#closeBtn:hover {
-    color: lightgray;
-}
+#closeBtn:hover { color: lightgray; }
 
 #text {
     position: absolute;
@@ -77,3 +144,145 @@
     color: white;
     transform: translate(-50%, -50%);
 }
+
+
+/****************************
+        Links Styling
+****************************/
+a{
+    text-decoration: none;
+    color: var(--orange);
+}
+
+a:hover{
+    color: var(--brown);
+}
+
+
+/***********************************
+        Produkt Specifikationer
+***********************************/
+.specs{
+    font-family: var(--font-subheader);
+    font-size: 24px;
+}
+.pris{
+    color: var(--orange);
+}
+
+
+
+/****************************
+        Bøger Carousel
+****************************/
+.item img {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 300px;
+    height: auto;
+}
+
+.title {
+    margin-bottom: 2px;
+    color: var(--orange);
+}
+
+.author {
+    font-style: italic;
+    margin-top: 2px;
+}
+
+#carousel {
+    --items: 5;
+    --middle: 3;
+    --position: 3;
+    width: 100vw;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    perspective: 600px;
+    transform-style: preserve-3d;
+  }
+  
+  .item {
+    position: absolute;
+    width: 400px;
+    height: 650px;
+    background: white;
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.25s ease;
+    --r: calc(var(--position) - var(--offset));
+    --abs: max(calc(var(--r) * -1), var(--r));
+    transform: rotateY(calc(-10deg * var(--r)))
+               translateX(calc(-400px * var(--r)));
+    z-index: calc((var(--items) - var(--abs)));
+  }
+  
+  /* Assign --offset to each item */
+  .item:nth-of-type(1) { --offset: 1; }
+  .item:nth-of-type(2) { --offset: 2; }
+  .item:nth-of-type(3) { --offset: 3; }
+  .item:nth-of-type(4) { --offset: 4; }
+  .item:nth-of-type(5) { --offset: 5; }
+  
+  .carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: black;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .arrow.left {
+    left: 20px;
+  }
+  
+  .arrow.right {
+    right: 20px;
+  }
+
+/* responsiv carousel */
+  @media (max-width: 768px) {
+    .item {
+      width: 90vw;
+      height: auto;
+      padding: 15px;
+      transform: rotateY(calc(-10deg * var(--r)))
+                 translateX(calc(-70vw * var(--r)));
+    }
+  
+    .title {
+      font-size: 1.2rem;
+    }
+  
+    .author {
+      font-size: 1rem;
+    }
+  
+    .arrow {
+      font-size: 2rem;
+    }
+  }
+  
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+

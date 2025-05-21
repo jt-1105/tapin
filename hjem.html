@@ -1,86 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-..." crossorigin="anonymous">
-    <!-- Customs CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="stylelogin.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Landing / Login</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stylelogin.css">
 </head>
 <body>
-<!---------
-  NAV BAR
----------->
+
 <header>
-  <nav class="navbar navbar-light bg-light">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
-<!----------
-LOGO / BRAND
------------>
-      <a class="navbar-brand" href="hjem.html">
-        <img src="path/to/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
-      </a>
-<!--------------------------
-TOGGLER / COLLAPSIBLE BUTTON 
---------------------------->
-      <button class="btn d-lg-none" type="button" id="menuToggle" aria-label="Toggle menu">
+  <!-------------------
+          NAV BAR
+  -------------------->
+  <nav class="navbar navbar-light navbar-expand-lg" style="background-color: var(--beige) !important;">
+    <div class="container-fluid">
+
+      <!----------------
+      OFFCANVAS TOGGLER (mobile)
+      ---------------->
+      <button class="btn d-lg-none" type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasMenu"
+              aria-controls="offcanvasMenu"
+              aria-label="Toggle menu">
         <i class="bi bi-list fs-2"></i>
       </button>
+
+      <!-------------------
+      DESKTOP NAV LINKS
+      -------------------->
+      <ul class="navbar-nav me-auto d-none d-lg-flex">
+        <li class="nav-item"><a class="nav-link" href="hjem.html">Hjem</a></li>
+        <li class="nav-item"><a class="nav-link" href="omos.html">Om Os</a></li>
+      </ul>
+
+      <!-------------------
+      BRAND / LOGO
+      -------------------->
+      <a class="navbar-brand mx-auto" href="hjem.html">
+        <img src="path/to/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+      </a>
+
+      <!--------------------
+      LOGIN BUTTON (desktop)
+      -------------------->
+      <div class="d-none d-lg-block">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+          Log In
+        </button>
+      </div>
+
     </div>
   </nav>
 
-<!----------
-NAVBAR LINKS
------------>
-  <div id="sideMenu" class="d-lg-none">
-    <ul class="nav flex-column p-4">
-      <li class="nav-item">
-        <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="hjem.html">Hjem</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="omos.html">Om Os</a>
-      </li>
-    </ul>
+  <!------------
+  OFFCANVAS MENU
+  (mobile only)
+  ------------>
+  <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-------------------
+      OFFCANVAS NAV LINKS
+      -------------------->
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link" href="hjem.html">Hjem</a></li>
+        <li class="nav-item"><a class="nav-link" href="omos.html">Om Os</a></li>
+        <li class="nav-item mt-3">
+          <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#loginModal">
+            Log In
+          </button>
+        </li>
+      </ul>
+    </div>
   </div>
-  <div id="menuOverlay" class="d-lg-none"></div>
 </header>
 
-
-<!--------- 
-LOGIN MODAL
+<!---------
+  LOGIN MODAL
 ---------->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="loginModalLabel">Log In</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-              <form>
-              <div class="mb-3">
-                  <label for="loginEmail" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="loginEmail" placeholder="name@example.com">
-              </div>
-              <div class="mb-3">
-                  <label for="loginPassword" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="loginPassword" placeholder="Password">
-              </div>
-              <div class="d-flex justify-content-between align-items-center">
-                <a class="btn btn-primary" href="brugerhjem.html">Log In</a> 
-                  <a href="#recover" class="small">Gendan Konto</a>
-              </div>
-              </form>
-          </div>
-          </div>
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="loginEmail" placeholder="name@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+              <a class="btn btn-primary" href="brugerhjem.html">Log In</a>
+           
+              <a href="#recover" class="small">Gendan Konto</a>
+          </div>
+        </form>
       </div>
+    </div>
+  </div>
+</div>
 
 <!----------
     MAIN

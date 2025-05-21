@@ -1,94 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!-- link til bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <!-- Customs CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="stylebruger.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>User Portal Skeleton</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stylebruger.css">
 </head>
 <body>
-<!-------------------
-        NAV BAR
--------------------->
+
 <header>
-  <nav class="navbar navbar-light bg-light">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
+  <!-------------------
+          NAV BAR
+  -------------------->
+  <nav class="navbar navbar-expand-lg" style="background-color: var(--beige) !important;">
+    <div class="container-fluid">
 
-      <!------------
-      VENTRE WRAPPER 
-      ------------->
-      <div class="d-flex align-items-center">
-        <button
-          class="btn d-lg-none me-2"
-          type="button"
-          id="menuToggle"
-          aria-label="Toggle navigation">
-          <i class="bi bi-list fs-2"></i>
-        </button>
-      </div>
+      <!----------------
+      OFFCANVAS TOGGLER (mobile only)
+      ---------------->
+      <button class="btn d-lg-none" type="button"
+              data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+              aria-controls="offcanvasMenu">
+        <i class="bi bi-list fs-2"></i>
+      </button>
 
-      <!------------------- 
-      BRAND / CENTERED LOGO
-      --------------------->
-      <a class="navbar-brand mx-3" href="brugerhjem.html">
+      <!-------------------
+      DESKTOP NAV LINKS
+      -------------------->
+      <ul class="navbar-nav me-auto d-none d-lg-flex">
+        <li class="nav-item"><a class="nav-link" href="brugerhjem.html">Hjem</a></li>
+        <li class="nav-item"><a class="nav-link" href="sortiment.html">Sortiment</a></li>
+        <li class="nav-item"><a class="nav-link" href="bartenderguide.html">Bartender Guide</a></li>
+        <li class="nav-item"><a class="nav-link" href="resurser.html">Resurser</a></li>
+      </ul>
+
+      <!-------------------
+      BRAND / LOGO
+      -------------------->
+      <a class="navbar-brand mx-auto mx-lg-0" href="brugerhjem.html">
         <img src="path/to/logo.png" alt="Logo" height="40">
       </a>
 
       <!-------------- 
-      HØJRE SIDE ICONS 
+      RIGHT ICONS GROUP
       --------------->
-      <div class="d-flex align-items-center">
+      <div class="d-flex ms-auto align-items-center">
         <!------- 
-        SØGE ICON
+        SEARCH DROPDOWN
         -------->
-        <button
-          class="btn d-lg-none me-2"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#searchBar"
-          aria-controls="searchBar"
-          aria-expanded="false"
-          aria-label="Toggle search">
-          <i class="bi bi-search fs-4"></i>
-        </button>
-
+        <div class="dropdown">
+          <button class="btn" id="searchDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-search fs-4"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end p-3">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search">
+              <button class="btn btn-primary" type="submit">Go</button>
+            </form>
+          </div>
+        </div>
         <!-------------------- 
         PROFILE PICTURE BUTTON
         ---------------------->
-        <a href="profil.html" class="ms-2">
+        <a href="profil.html" class="ms-3">
           <img src="path/to/profile-pic.jpg" alt="Profil" height="40" class="rounded-circle">
         </a>
       </div>
     </div>
   </nav>
 
-  <!-------------------------- 
-  COLLAPSIBLE MOBILE SØGE FORM
-  -------------------------->
-  <div class="collapse w-100 mt-2" id="searchBar">
-    <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search">
-      <button class="btn btn-outline-primary" type="submit">Go</button>
-    </form>
+  <!------------
+  OFFCANVAS MENU
+  (mobile only)
+  ------------>
+  <div class="offcanvas offcanvas-start d-lg-none"
+       tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-------------------
+      NAV LINKS
+      -------------------->
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link" href="brugerhjem.html">Hjem</a></li>
+        <li class="nav-item"><a class="nav-link" href="sortiment.html">Sortiment</a></li>
+        <li class="nav-item"><a class="nav-link" href="bartenderguide.html">Bartender Guide</a></li>
+        <li class="nav-item"><a class="nav-link" href="resurser.html">Resurser</a></li>
+      </ul>
+    </div>
   </div>
-
-  <!----------
-  NAVBAR LINKS
-  ----------->
-  <div id="sideMenu" class="d-lg-none">
-    <ul class="nav flex-column p-4">
-      <li class="nav-item"><a class="nav-link" href="brugerhjem.html">Hjem</a></li>
-      <li class="nav-item"><a class="nav-link" href="sortiment.html">Sortiment</a></li>
-      <li class="nav-item"><a class="nav-link" href="bartenderguide.html">Bartender Guide</a></li>
-      <li class="nav-item"><a class="nav-link" href="resurser.html">Resurser</a></li>
-    </ul>
-  </div>
-  <div id="menuOverlay" class="d-lg-none"></div>
 </header>
 
 <!----------
