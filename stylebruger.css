@@ -343,20 +343,20 @@ BARTENDERGUIDE.HTML CSS
   .title  { font-size: 1.2rem; }
   .author { font-size: 1rem; }
 }
-/* Make the whole toast orange with white text */
+/* Outer toast: fully rounded, beige background */
 .toast-orange {
   background-color: var(--beige) !important;
+  border-radius: 0.25rem !important;
   color: #fff !important;
 }
 
-/* Also force the inner body and header (if present) */
-.toast-orange .toast-body,
-.toast-orange .toast-header {
-  background-color: var(--beige) !important;
-  color:            #fff         !important;
+/* Inner body: transparent so you see the outer radius */
+.toast-orange .toast-body {
+  background-color: transparent !important;
+  border-radius: 0;            /* no extra rounding */
 }
 
-/* Ensure the close “×” is visible in white */
+/* Close button stays white */
 .toast-orange .btn-close {
   filter: brightness(0) invert(1);
 }
