@@ -51,3 +51,4 @@ const posts = Array.from({ length: POST_COUNT }, (_, i) => {
 // Write it out!
 fs.writeFileSync('posts.json', JSON.stringify(posts, null, 2));
 console.log(`✅ Generated posts.json with ${POST_COUNT} posts`);
+

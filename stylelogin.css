@@ -80,15 +80,11 @@ nav.navbar {
 
 
 
+/*******************************
+ 
+        style-hjem 
 
-
-
-
-
-
-
-
-
+ ******************************/
 
 /* Make the page fill the viewport and remove default margins */
 html, body {
@@ -103,6 +99,7 @@ main {
   height: 100vh;
   overflow: hidden;
 }
+
 
 /* 1) Background video at the lowest layer (z-index: 1) */
 .container-bghjem {
@@ -144,15 +141,16 @@ main {
   text-align: center;
   padding: 0 1rem;
   color: #fff; /* make sure text is readable on video */
+  gap: 1rem;
 }
 
 .container-titelhjem h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   margin: 0.5rem 0;
 }
 
 .container-titelhjem h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 0.5rem 0 1rem;
 }
 
@@ -166,16 +164,13 @@ main {
 
 
 
+/****************************
 
 
+      style-omos
 
 
-
-
-
-
-
-/* style-omos.css */
+***************************/
 
 /* 1) Global section margins */
 section {

@@ -1,14 +1,10 @@
-/*************************
-        
-**************************/
+/****************************************
+Navbar & Offcanvas Background (all sizes)
+****************************************/
 main{
     margin: 50px;
 }
 
-
-/*****************************
-        MENU OVERLAY
-****************************/
 #sideMenu {
   position: fixed;
   top: 0;
@@ -21,9 +17,7 @@ main{
   overflow-y: auto;
   box-shadow: 2px 0 5px rgba(0,0,0,0.5);
 }
-/********************************************
-  1) Navbar & Offcanvas Background (all sizes)
-********************************************/
+
 nav.navbar,
 .offcanvas {
   background-color: var(--beige) !important;
@@ -82,8 +76,142 @@ nav.navbar,
   }
 }
 
+/*************************************
+  HJEM.HTML CSS
+*************************************/
+/* Hurtiglink container*/
+.container-hurtiglink {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 2rem;
+}
+
+/* 2) Base “card” styles—always visible */
+.card-link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* size & shape */
+  min-height: 200px;            /* adjust as needed */
+  padding: 1rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+
+  /* background image + fallback color */
+  background-color: var(--brown);
+  background-size: cover;
+  background-position: center;
+
+  /* text on top */
+  color: #fff;
+  text-decoration: none;
+
+  /* prepare hover transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 3) Dark overlay (always on) */
+.card-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+/* ensure your headings/paras float above the overlay */
+.card-link > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* 4) Hover effect—only lift & shadow */
+.card-link:hover,
+.card-link:focus {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  color: var(--beige);
+}
+
+/* 5) Per-card background images */
+.container-opskrifter {
+  background-image: url('/path/to/your-opskrifter-bg.jpg');
+}
+.container-opgaver {
+  background-image: url('/path/to/your-opgaver-bg.jpg');
+}
+
+/* 6) Text sizing */
+.card-link h2 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+.card-link p {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+}
+
+/* posts kort*/
+/* ── 1) Flex-header for name + HH:MM ────────────────────────────────── */
+.card-title.d-flex {
+  font-family: var(--font-body);
+}
+
+/* ── 2) Media grid & thumbnails ───────────────────────────────────── */
+.post-media-grid {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+.media-thumb {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.media-thumb:hover {
+  transform: scale(1.03);
+}
+
+/* ── 3) Comments toggle styling in orange ────────────────────────── */
+.btn-link {
+  color: var(--orange) !important;
+}
+.btn-link:hover,
+.btn-link:focus {
+  color: var(--brown) !important;
+}
+
+
+
+/************************************
+SORTIMENT.HTML CSS
+*************************************/
+/*produkter.html*/
+
+/*produktinformation.html*/
+.specs{
+    font-family: var(--font-subheader);
+    font-size: 24px;
+}
+.pris{
+    color: var(--orange);
+}
+/************************************
+BARTENDERGUIDE.HTML CSS
+*************************************/
+/*oevelser.html*/
+/*opskrifter.html*/
+/*specifikeoevelser.html*/
+/*specifikeopskrifter.html*/
 /********************************************
-  5) “Gode råd” overlay pop-up 
+  RESURSER.HTML CSS
 ********************************************/
 #overlay {
   position: fixed;
@@ -105,9 +233,7 @@ nav.navbar,
 }
 
 
-/***********************************
-        Gode råd overlay pop-up
-***********************************/
+/*Gode råd overlay pop-up*/
 #overlay {
   position: fixed;
   display: none;
@@ -151,36 +277,7 @@ nav.navbar,
   color: white;
 }
 
-
-/****************************
-        Links Styling
-****************************/
-a{
-    text-decoration: none;
-    color: var(--orange);
-}
-
-a:hover{
-    color: var(--brown);
-}
-
-
-/***********************************
-        Produkt Specifikationer
-***********************************/
-.specs{
-    font-family: var(--font-subheader);
-    font-size: 24px;
-}
-.pris{
-    color: var(--orange);
-}
-
-
-
-/****************************
-        Bøger Carousel
-****************************/
+/*Bøger Carousel*/
 .item img {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -285,3 +382,7 @@ a:hover{
     font-size: 2rem;
   }
 }
+
+
+
+

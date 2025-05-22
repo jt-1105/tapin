@@ -65,4 +65,14 @@ p, li, a{
     border: 2px solid #d4b297;
 }
 
+/****************************
+        Links Styling
+****************************/
+a{
+    text-decoration: none;
+    color: var(--orange);
+}
 
+a:hover{
+    color: var(--brown);
+}
