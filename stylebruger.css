@@ -213,70 +213,6 @@ BARTENDERGUIDE.HTML CSS
 /********************************************
   RESURSER.HTML CSS
 ********************************************/
-#overlay {
-  position: fixed;
-  display: none;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  z-index: 1040;
-  display: none;
-}
-
-/* Active menu & overlay */
-#sideMenu.open {
-  left: 0;
-}
-
-#menuOverlay.show {
-  display: block;
-}
-
-
-/*Gode råd overlay pop-up*/
-#overlay {
-  position: fixed;
-  display: none;
-  width: 100%;
-  height: 100%;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 2;
-  cursor: pointer;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 2;
-  cursor: pointer;
-}
-
-#closeBtn {
-  position: absolute;
-  top: 20px; right: 30px;
-  font-size: 30px;
-  color: white;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 3;
-  position: absolute;
-  top: 20px; right: 30px;
-  font-size: 30px;
-  color: white;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 3;
-}
-#closeBtn:hover { color: lightgray; }
-#closeBtn:hover { color: lightgray; }
-
-#text {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-
 /*Bøger Carousel*/
 .item img {
   margin-top: 15px;
@@ -321,18 +257,20 @@ BARTENDERGUIDE.HTML CSS
   transition: all 0.25s ease;
   --r: calc(var(--position) - var(--offset));
   --abs: max(calc(var(--r) * -1), var(--r));
-  transform: rotateY(calc(-10deg * var(--r)))
-             translateX(calc(-400px * var(--r)));
-  z-index: calc((var(--items) - var(--abs)));
+  transform: 
+    rotateY(calc(-10deg * var(--r)))
+    translateX(calc(-400px * var(--r)));
+  z-index: calc(var(--items) - var(--abs));
 }
 
-/* Assign --offset to each item */
+/* Assign offsets */
 .item:nth-of-type(1) { --offset: 1; }
 .item:nth-of-type(2) { --offset: 2; }
 .item:nth-of-type(3) { --offset: 3; }
 .item:nth-of-type(4) { --offset: 4; }
 .item:nth-of-type(5) { --offset: 5; }
 
+/* Carousel wrapper & arrows */
 .carousel-wrapper {
   position: relative;
   display: flex;
@@ -340,49 +278,214 @@ BARTENDERGUIDE.HTML CSS
   justify-content: center;
 }
 
+/* CSS-drawn chevron arrows */
 .arrow {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: none;
-  border: none;
-  font-size: 3rem;
-  color: black;
   cursor: pointer;
   z-index: 10;
+  font-size: 4rem;       /* arrow size */
+  line-height: 1;
+  color: var(--orange);
 }
 
+/* Positioning left/right */
 .arrow.left {
   left: 20px;
+  right: auto;
 }
-
 .arrow.right {
   right: 20px;
+  left: auto;
 }
 
-/* responsiv carousel */
-@media (max-width: 768px) {
+/* Draw the arrow glyph */
+.arrow::before {
+  display: block;
+  text-align: center;
+  content: '‹';         /* default is left */
+  color: inherit;
+}
+.arrow.right::before {
+  content: '›';         /* right arrow */
+}
+
+/*MOBILE OVERRIDE (≤ 992px)*/
+@media (max-width: 991.98px) {
+  /* Hide arrows on touch */
+  .carousel-wrapper .arrow {
+    display: none !important;
+  }
+
+  /* Prevent horizontal overflow */
+  .carousel-wrapper {
+    overflow-x: hidden;
+  }
+
+  /* Shrink cards to fit */
   .item {
-    width: 90vw;
+    width: 77vw;
     height: auto;
     padding: 15px;
-    transform: rotateY(calc(-10deg * var(--r)))
-               translateX(calc(-70vw * var(--r)));
+    transform: 
+      rotateY(calc(-10deg * var(--r)))
+      translateX(calc(-70vw * var(--r)));
   }
 
-  .title {
-    font-size: 1.2rem;
+  /* Adjust text sizes */
+  .title  { font-size: 1.2rem; }
+  .author { font-size: 1rem; }
+}
+/* Make the whole toast orange with white text */
+.toast-orange {
+  background-color: var(--beige) !important;
+  color: #fff !important;
+}
+
+/* Also force the inner body and header (if present) */
+.toast-orange .toast-body,
+.toast-orange .toast-header {
+  background-color: var(--beige) !important;
+  color:            #fff         !important;
+}
+
+/* Ensure the close “×” is visible in white */
+.toast-orange .btn-close {
+  filter: brightness(0) invert(1);
+}
+
+
+/*GODE RÅD*/
+
+/* ──────────────────────────────────────────
+   Title styling
+────────────────────────────────────────── */
+section.goderad {
+  margin-top: 50px;     /* 50px below the carousel */
+  text-align: center;
+}
+section.goderad h1 {
+  display: inline-block;
+  margin-bottom: 60px;
+}
+
+/* ──────────────────────────────────────────
+   Default (mobile <992px)
+   - Lists stacked vertically
+   - Each <li> gets orange border to signal clickability
+────────────────────────────────────────── */
+section.goderad .goderad-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 200px;  /* space below the lists */
+  gap: 2rem;
+  margin: 0 1rem;  /* small side padding on mobile */
+}
+
+section.goderad .goderad-list .list ul {
+  list-style: none;  /* no bullets */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;  /* advice items flow vertically inside each list */
+  gap: 1rem;   
+}
+
+section.goderad .goderad-list .list ul li {
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  border: 2px solid var(--orange);
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--white);
+}
+
+section.goderad .goderad-list .list ul li:hover {
+  transform: translateY(-2px);
+  text-decoration: underline;
+  color: var(--orange);
+}
+
+/* ──────────────────────────────────────────
+   Desktop (≥992px)
+   - Lists aligned horizontally  
+   - 150px gutters left/right  
+   - Remove orange borders on li (they’re obvious click targets in desktop layout)
+────────────────────────────────────────── */
+@media (min-width: 992px) {
+  section.goderad .goderad-list {
+    flex-direction: row;
+    gap: 2rem;
+    margin: 0 150px;
   }
 
-  .author {
-    font-size: 1rem;
+  section.goderad .goderad-list .list {
+    flex: 1;  /* each of the three lists takes equal width */
   }
 
-  .arrow {
-    font-size: 2rem;
+  section.goderad .goderad-list .list ul li {
+    border: none;         /* remove mobile border */
+    background: none;     /* transparent background */
+    padding: 0;           /* reset mobile padding */
   }
 }
 
+/* ──────────────────────────────────────────
+   Overlay backdrop & content
+────────────────────────────────────────── */
+#overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  z-index: 1040;
+  cursor: pointer;
+}
+
+#overlayContent {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  background-color: var(--brown);
+  color: var(--white);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  overflow-y: auto;
+  z-index: 1041;
+}
+
+#closeBtn {
+  position: absolute;
+  top: 20px; right: 30px;
+  font-size: 30px;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1042;
+}
+
+#closeBtn:hover {
+  color: lightgray;
+}
+
+#overlayContent h2,
+#overlayContent p {
+  margin: 0 0 1rem;
+  line-height: 1.5;
+}
 
 
 

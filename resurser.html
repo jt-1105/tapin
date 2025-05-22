@@ -51,7 +51,7 @@
       RIGHT ICONS GROUP
       --------------->
       <div class="d-flex ms-auto align-items-center">
-        <!------- 
+        <!-------
         SEARCH DROPDOWN
         -------->
         <div class="dropdown">
@@ -65,13 +65,14 @@
             </form>
           </div>
         </div>
-        <!-------------------- 
+        <!--------------------
         PROFILE PICTURE BUTTON
         ---------------------->
         <a href="profil.html" class="ms-3">
           <img src="path/to/profile-pic.jpg" alt="Profil" height="40" class="rounded-circle">
         </a>
       </div>
+
     </div>
   </nav>
 
@@ -100,23 +101,21 @@
   </div>
 </header>
 
-   
 <main>
-    <!-----------
-    TITEL (BØGER) 
-    ------------>
-    <section>
-        <div>
-            <h1>Boganbefalinger</h1>
-        </div>
-    </section>
+  <!-----------
+  TITEL (BØGER) 
+  ------------>
+  <section>
+    <div>
+      <h1>Boganbefalinger</h1>
+    </div>
+  </section>
 
-    <!-------------------
-BØGER CAROUSEL
--------------------->
-<section class="carousel-wrapper">
-  <button class="arrow left" onclick="moveCarousel(-1)">&#9664;</button>
-
+  <!-------------------
+  BØGER CAROUSEL
+  -------------------->
+  <section class="carousel-wrapper">
+  <span class="arrow left"  onclick="moveCarousel(-1)"></span>
   <div id="carousel">
     <div class="item">
       <img class="img-fluid" src="images/books/book1.jpg">
@@ -149,93 +148,136 @@ BØGER CAROUSEL
       <button type="button" class="btn btn-primary">Download e-bog</button>
     </div>
   </div>
-
-  <button class="arrow right" onclick="moveCarousel(1)">&#9654;</button>
+  <span class="arrow right" onclick="moveCarousel(1)"></span>
 </section>
 
-
-    <!--------------
-    TITEL (GODE RÅD)
-    --------------->
-    <section>
-        <div>
-            <h1>Gode Råd</h1>
-        </div>
-    </section>
-
-<!-------------------
-RÅD LISTE & RÅD POPUP
--------------------->
-    <div id="overlay" onclick="off()">
-        <button id="closeBtn" onclick="off()">✕</button>
-        <div id="text">Overlay Text</div>
-      </div>
-      
+  <!--------------
+  TITEL (GODE RÅD)
+  -------------->
+  <section class="goderad">
     <div>
-        <div>
+      <h1>Gode Råd</h1>
+    </div>
+
+    <!-------------------
+    RÅD LISTE & RÅD POPUP
+    -------------------->
+    <div id="overlay" onclick="off()">
+      <div id="overlayContent" onclick="event.stopPropagation()">
+        <button id="closeBtn" onclick="off()">✕</button>
+        <h2 id="title"></h2>
+        <p id="text"></p>
+      </div>
+    </div>
+
+    <div class="goderad-list">
+      <div class="list 1">
         <ul>
-            <li onclick="on('Råd 1 detalje')">Råd 1</li>
-            <li onclick="on('Råd 2 detalje')">Råd 2</li>
-            <li onclick="on('Råd 3 detalje')">Råd 3</li>
-            <li onclick="on('Råd 4 detalje')">Råd 4</li>
-            <li onclick="on('Råd 5 detalje')">Råd 5</li>
+          <li onclick="on(
+            'Hvis du drikker, så kun i fritiden',
+            'Som bartender kan fristelsen til at smage på dine egne kreationer være stor, men det anbefales at reservere alkoholiske nydelser til fritiden. Ved at afholde dig fra at drikke på arbejde bevarer du din professionelle dømmekraft, sikrer en skarp serviceniveau og undgår uplanlagte tømmermænd i vagten efterfølgende. Denne tilgang beskytter både dig selv og dine gæster ved at minimere fejl, øge sikkerheden bag baren og give dig en behagelig, afslappet oplevelse uden stress, når du er fri.'
+          )">Hvis du drikker, så kun i fritiden</li>
+
+          <li onclick="on(
+            'Find balancen mellem bar og privatliv',
+            'Bararbejde kan være intenst med sene vagter og højt tempo, hvilket hurtigt kan slide på din energi og trivsel. Sørg for at planlægge faste pauser, fridage og tid til hobbyer som sport, læsning eller kvalitetstid med familie og venner. En bevidst opdeling mellem arbejde og privatliv giver mental restitution og fysisk opladning, så du møder frisk og motiveret til næste vagt. En stabil balance fører til bedre performance, større arbejdsglæde og forebygger udbrændthed over tid.'
+          )">Find balancen mellem bar og privatliv</li>
+
+          <li onclick="on(
+            'Invester i dig selv med faglitteratur',
+            'Faglitteratur om spiritus, blandeteknik og servicekultur er en guldgrube for at udvide din teoretiske ballast og kreative horisont. Afslut én ny cocktailbog om måneden, noter de vigtigste principper, spiritussammensætninger og serveringstricks i din personlige bartender-journal. Ved systematisk at anvende tips og teknikker fra anerkendte forfattere opbygger du en solid vidensbase, der inspirerer til innovation, løfter kvaliteten af dine drinks og øger din selvtillid bag baren.'
+          )">Invester i dig selv med faglitteratur</li>
+
+          <li onclick="on(
+            'Tag relevante bartenderskurser',
+            'Praktisk træning under kyndig vejledning er uundværlig for at mestre flair, mixologi og effektiv bartending. Deltag i både tilstedeværelseskurser og online-workshops, der fokuserer på spiritusskoler, avancerede blandeteknikker og anticlockwise-processer. Ved regelmæssigt at opgradere dine evner holder du dig ajour med branchetrends, udvider dit netværk og demonstrerer professionalisme over for arbejdsgivere og gæster. Investeringen i kurser betaler sig i form af bedre jobmuligheder og større kreativ frihed.'
+          )">Tag relevante bartenderskurser</li>
+
+          <li onclick="on(
+            'Lær af de bedste barer i verden',
+            'Studér ikoniske cocktailbarer i metropoler som London, New York og Tokyo for at samle inspiration til menu, barindretning og serviceflow. Tag noter om, hvordan atmosfære, musikvalg og lyssætning spiller ind i gæsteoplevelsen, og hvordan menuopbygning guider kunderne gennem smagsprofilerne. Efter hjemkomst kan du implementere små, men effektfulde justeringer som en signaturdrink, en visuelt attraktiv opsætning eller et særligt servicekoncept, der giver din bar karakter og differentierer dig på markedet.'
+          )">Lær af de bedste barer i verden</li>
         </ul>
       </div>
 
-      <div>
+      <div class="list 2">
         <ul>
-            <li onclick="on('Råd 6 detalje')">Råd 6</li>
-            <li onclick="on('Råd 7 detalje')">Råd 7</li>
-            <li onclick="on('Råd 8 detalje')">Råd 8</li>
-            <li onclick="on('Råd 9 detalje')">Råd 9</li>
-            <li onclick="on('Råd 10 detalje')">Råd 10</li>
+          <li onclick="on(
+            'Opbyg netværk i branchen',
+            'Deltag aktivt i brancheevents, spiritussmagninger og barfestivaler for at møde kolleger, leverandører og barchefer. Opbyg relationer via sociale medier, del erfaringer og hold forbindelsen med professionelle, der kan dele tips til job, kurser og samarbejder. Hav altid visitkort eller en digital QR-kode klar til din LinkedIn- og Instagram-profil, så nye kontakter hurtigt kan følge dit arbejde. Et stærkt netværk åbner døre til nye karrieremuligheder og fælles vidensudveksling.'
+          )">Opbyg netværk i branchen</li>
+
+          <li onclick="on(
+            'Prioritér restitution og mental sundhed',
+            'Barlivets intensitet med sene nattetimer og højt lydniveau kan påvirke din mentale balance. Implementer daglige rutiner som kort meditation, let motion eller en aften gåtur for at falde til ro. Sæt grænser for maksimal vagttid per uge, og tag en åben dialog med kolleger eller venner, hvis du oplever stress eller udmattelse. Ved at sætte din mentale sundhed først sikrer du langtidsholdbarhed i branchen, reducerer risikoen for udbrændthed og bevarer glæden ved at skabe gode gæsteoplevelser hver dag.'
+          )">Prioritér restitution og mental sundhed</li>
+
+          <li onclick="on(
+            'Skab dit personlige brand som bartender',
+            'Differentier dig ved at udvikle en unik signaturdrink eller flair-trick, som bliver din varemærke. Tag professionelle billeder af dine kreationer, optag korte videoer af din cocktailopbygning og del indhold regelmæssigt på sociale platforme. Interager med følgere ved at dele opskrifter, besvare spørgsmaal og vise ”behind the scenes”. Et stærkt personligt brand positionerer dig som ekspert, tiltrækker invitationer til events og åbner samarbejdsmuligheder med spiritusmærker, hvilket giver både øget synlighed og karrierefremgang.'
+          )">Skab dit personlige brand som bartender</li>
+
+          <li onclick="on(
+            'Eksperimentér med smagsprofiler',
+            'Berig din cocktail-menu ved at teste utraditionelle ingredienser som fermenterede frugter, urter og lokale specialiteter. Opstil små blindtests med kolleger eller venner, så du kan få ærlig feedback på balance mellem sødt, surt, bittert og umami. Noter hvilke kombinationer der skaber kompleksitet og harmoni, og dokumenter resultaterne i din bartender-journal. Ved systematisk eksperimentering skærper du din intuition for, hvilke smagsprofiler dine gæster vil elske, og løfter kvaliteten af dine cocktails betydeligt.'
+          )">Eksperimentér med smagsprofiler</li>
+
+          <li onclick="on(
+            'Forstå og imødekom dine gæsters behov',
+            'Den bedste bartender er en god lytter: observer gæstens kropssprog, stil opfølgende spørgsmål og tilpas dine anbefalinger til deres præferencer og humør. Hav altid non-alkoholiske og lav-alkoholiske alternativer klar, så gæster, der ønsker lettere valg, kan få en mindeværdig oplevelse. Ved at skræddersy hvert møde skaber du personlig relation, øger besøgsfrekvensen og opbygger loyalitet. Fremragende relationsfærdigheder differentierer dig i branchen og hjælper din karriere fremad.'
+          )">Forstå og imødekom dine gæsters behov</li>
         </ul>
       </div>
 
-      <div>
+      <div class="list 3">
         <ul>
-            <li onclick="on('Råd 11 detalje')">Råd 11</li>
-            <li onclick="on('Råd 12 detalje')">Råd 12</li>
-            <li onclick="on('Råd 13 detalje')">Råd 13</li>
-            <li onclick="on('Råd 14 detalje')">Råd 14</li>
-            <li onclick="on('Råd 15 detalje')">Råd 15</li>
+          <li onclick="on(
+            'Hold styr på økonomien bag baren',
+            'For at sikre en profitabel drift bør du føre et detaljeret regnskab over alle omkostninger: spiritusindkøb, forbrugsartikler, lønninger og husleje. Brug et pålideligt regnskabs- og POS-system til at analysere salgstal, identificere de bedst performende cocktails og reducere spild gennem optimeret lagerstyring. Planlæg månedlige budgetmøder, hvor du sammenligner forventede og faktiske omkostninger, så du hurtigt kan justere priser eller leverandøraftaler. En systematisk økonomistyring sikrer langsigtet lønsomhed og bæredygtig vækst for baren.'
+          )">Hold styr på økonomien bag baren</li>
+
+          <li onclick="on(
+            'Coach nye bartendere og del din viden',
+            'Som erfaren bartender kan du løfte hele teamets niveau ved at etablere en mentorordning. Start med at gennemgå grundlæggende færdigheder som baropsætning, terminologi og drinksspecifikationer, uanset den nye medarbejders erfaring. Giv løbende konstruktiv feedback under formelle evalueringsmøder frem for mikroledelse i vagten. Organisér peer-to-peer workshops, hvor bartendere deler teknikker og erfaringer. En struktureret træningskultur fremmer vidensdeling, øger teamets samlede performance og styrker fastholdelse.'
+          )">Coach nye bartendere og del din viden</li>
+
+          <li onclick="on(
+            'Udnyt teknologi til at forbedre servicen',
+            'Moderne bartending kombinerer hands-on færdigheder med digital innovation. Implementer VR-baserede træningsmoduler, hvor nye bartendere kan øve flair og service i simulerede miljøer. Integrer inventory apps og POS-systemer for realtidsopdateringer på lagerstatus, så du undgår tomme flasker under travlhed. Overvej selvbetjeningsløsninger som self-pour-taps for at aflaste barstationen, mens gæsterne selv kan dosere. Ved at kombinere teknologiske værktøjer med praktisk træning skaber du en effektiv, moderne og engagerende oplevelse for både personale og gæster.'
+          )">Udnyt teknologi til at forbedre servicen</li>
+
+          <li onclick="on(
+            'Arbejd smart: tidseffektivitet bag baren',
+            'Effektiv bartending handler om timing og organisering: opbyg en konsekvent mise en place, så ingredienser, glas og værktøjer altid er klar. Brug princippet om “full hands in, full hands out” til at reducere unødvendige ture frem og tilbage. Saml lignende drinks i batches, og præpour simple ingredienser i små beholdere. Overvej ergonomisk udstyr, der minimerer belastning, og indfør hurtig adgang til rengøring med to-kammer glasvask. Ved at optimere workflowet mindsker du stress, øger produktiviteten og holder kvaliteten høj selv i myldretiden.'
+          )">Arbejd smart: tidseffektivitet bag baren</li>
+
+          <li onclick="on(
+            'Sæt mål for din bartendervækst',
+            'Definer SMART-mål for din udvikling: specifikke, målbare, attraktive, realistiske og tidsbestemte. Sæt eksempelvis som mål at mestre fem nye cocktails eller øge dit tips-gennemsnit med 10% inden for de næste tre måneder. Del målene op i ugentlige træningsplaner, log dine fremskridt i en journal, og evaluer under mentor-feedback. Fejr milepæle med kolleger for at styrke motivationen. Ved at arbejde målrettet og struktureret bygger du en dokumenteret udviklingsplan, der accelererer din karriere og øger din professionalisme.'
+          )">Sæt mål for din bartendervækst</li>
         </ul>
       </div>
     </div>
+  </section>
 </main>
-
-<!------------
-SCRIPT OVERLAY
--------------->
-<script>
-  //  script til overlay
-  function on(message) {
-    document.getElementById("text").textContent = message;
-    document.getElementById("overlay").style.display = "block";
-  }
-
-  function off() {
-    document.getElementById("overlay").style.display = "none";
-  }
-
-  //  script til previous next knap af bøger carousel
-  let position = 3;
-  const totalItems = 5;
-
-  function moveCarousel(direction) {
-    position += direction;
-
-    if (position < 1) position = totalItems;
-    if (position > totalItems) position = 1;
-
-    document.getElementById('carousel').style.setProperty('--position', position);
-  }
-</script>
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="downloadToast"
+       class="toast toast-orange align-items-center border-0"
+       role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        Downloading the e-bog…
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto"
+              data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
 <!--------------
 SCRIPT BOOTSTRAP
---------------->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
-
+--------------->  
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>  
+<script src="script.js"></script>  
 </body>
 </html>
