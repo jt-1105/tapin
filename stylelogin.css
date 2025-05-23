@@ -62,9 +62,9 @@ nav.navbar {
 /*“Log In” Button Styles*/
 @media (max-width: 991.98px) {
   .btn-primary {
-    background-color: var(--brown) !important;
+    background-color: var(--oranr) !important;
     color: var(--white) !important;
-    border: 2px solid var(--brown) !important;
+    border: 2px solid var(--orange) !important;
   }
 }
 
@@ -72,15 +72,15 @@ nav.navbar {
 @media (min-width: 992px) {
   .btn-primary {
     background-color: transparent !important;
-    color: var(--brown) !important;
-    border: 2px solid var(--brown) !important;
+    color: var(--orange) !important;
+    border: 2px solid var(--orange) !important;
     transition: background-color 0.15s ease, color 0.15s ease;
   }
   .btn-primary:hover,
   .btn-primary:focus {
-    background-color: var(--brown) !important;
+    background-color: var(--orange) !important;
     color: var(--white) !important;
-    border-color: var(--brown) !important;
+    border-color: var(--orange) !important;
   }
 }
 
