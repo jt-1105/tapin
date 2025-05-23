@@ -187,6 +187,16 @@ section {
     margin: 50px;
   }
 }
+.container-overlaygrey {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.06); /* light grey */
+  z-index: 2; /* beneath .container-titelhjem (z-index 3) */
+  pointer-events: none; /* allow buttons/text to be clickable */
+}
 
 /* 2) Hero: center the <h1> vertically & horizontally */
 .page-header {
@@ -223,6 +233,7 @@ section {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: space-evenly;
   gap: 2rem;
 }
 .contact-section__info h2 {

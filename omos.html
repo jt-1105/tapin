@@ -11,6 +11,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="stylelogin.css">
+  <link rel="icon" href="images/landingpage/tapin black 2.png" type="image/png">
 </head>
 <body>
 
@@ -107,7 +108,6 @@
           </div>
           <div class="d-flex justify-content-between align-items-center">
             <a class="btn btn-primary" href="brugerhjem.html">Log In</a>
-
             <a href="#recover" class="small">Gendan Konto</a>
           </div>
         </form>
@@ -116,80 +116,81 @@
   </div>
 </div>
 
-<!---
-TITEL
----->
-    <section class="page-header">
-    <div class="page-header__inner">
-      <h1>Om os</h1>
-    </div>
-  </section>
-   
+<!-----
+  TITEL
+------>
+<section class="page-header">
+  <div class="page-header__inner">
+    <h1>Om os</h1>
+  </div>
+</section>
+
 <!------------------------
-BILLEDE, BESKRIVELSE OM OS
+  BILLEDE, BESKRIVELSE OM OS
 ------------------------->
-   <section class="about-section">
-    <div class="about-section__image">
-      <a href="https://example.com/post5" target="_blank">
-        <img src="https://picsum.photos/1900/1200" alt="Placeholder">
-      </a>
-    </div>
-    <div class="about-section__content">
-      <h2>Om os</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nobis tenetur aperiam maiores maxime.
-        Commodi sunt neque minus non natus asperiores iste quasi facere deleniti soluta dolor voluptates velit hic
-        iure repellendus, molestiae unde quis fugit ex doloremque. Voluptatem nostrum blanditiis odio veritatis veniam
-        fugit id impedit sapiente sit rerum.
-      </p>
-    </div>
-  </section>
+<section class="about-section">
+  <div class="about-section__image">
+    <img src="images/landingpage/kontaktos.jpg" alt="Om os" />
+  </div>
+  <div class="about-section__content">
+    <h2>Om os</h2>
+    <p>
+      Hos TapIn har vi én mission: at gøre oplæring i bar- og restaurationsbranchen nemmere, hurtigere og sjovere – for alle. Med vores digitale læringsplatform slipper du for at gentage de samme instruktioner hundrede gange. I stedet får dine nye medarbejdere en struktureret, visuel og brugervenlig onboarding – tilpasset jeres arbejdsplads og jeres rutiner.
+      <br><br>
+      Vores løsning er skabt af en lille, dedikeret gruppe udviklere med erfaring fra både tech og servicebranchen. Vi ved, hvor vigtigt det er at få nye ansatte godt fra start – og hvor svært det kan være i et travlt arbejdsmiljø. Derfor har vi bygget en platform, der er mobilvenlig, nem at sætte op, og som hurtigt giver overblik over læringsforløb og fremskridt.
+      <br><br>
+      TapIn sikrer ensartet oplæring, øger tryghed og reducerer fejl. Medarbejderne lærer i deres eget tempo, og ledere får overblik uden ekstra arbejde. Resultatet? Mindre forvirring, færre spørgsmål og mere tid til god service.
+    </p>
+  </div>
+</section>
 
 <!---------------------------
-KONTAKT FORMULAR,KONTAKT INFO
+  KONTAKT FORMULAR, KONTAKT INFO
 ---------------------------->
-    <section class="contact-section">
-    <div class="contact-section__info">
-      <h2>Contact Us</h2>
-      <p>For inquiries, please reach out using the contact form below.</p>
-    </div>
-    <div class="contact-section__form container-formomos">
-      <form>
-        <div class="row mb-3">
-          <div class="col-md-6">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Your full name">
-          </div>
-          <div class="col-md-6">
-            <label for="businessName" class="form-label">Business Name</label>
-            <input type="text" class="form-control" id="businessName" placeholder="Your business name">
-          </div>
+<section class="contact-section">
+  <div class="contact-section__info">
+    <h2>Kontakt Os</h2>
+    <p>Har du spørgsmål? Udfyld kontaktformularen nedenfor – vi vender hurtigt tilbage.</p>
+  </div>
+
+  <div class="contact-section__form">
+    <form>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="name" class="form-label">Navn</label>
+          <input type="text" class="form-control" id="name" placeholder="Dit fulde navn">
         </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="email" placeholder="name@example.com">
+        <div class="col-md-6">
+          <label for="businessName" class="form-label">Virksomhedsnavn</label>
+          <input type="text" class="form-control" id="businessName" placeholder="Din arbejdsplads">
         </div>
-        <div class="mb-3">
-          <label for="position" class="form-label">Position</label>
-          <select class="form-select" id="position">
-            <option selected disabled>Select your position</option>
-            <option value="owner">Owner</option>
-            <option value="manager">Manager</option>
-          </select>
-        </div>
-        <div class="mb-3">
-          <label for="description" class="form-label">Description</label>
-          <textarea class="form-control" id="description" rows="4" placeholder="How can we help you?"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Send</button>
-      </form>
-    </div>
-  </section>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="din@email.dk">
+      </div>
+      <div class="mb-3">
+        <label for="position" class="form-label">Din rolle</label>
+        <select class="form-select" id="position">
+          <option selected disabled>Vælg din rolle</option>
+          <option value="owner">Ejer</option>
+          <option value="manager">Leder</option>
+          <option value="staff">Medarbejder</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Besked</label>
+        <textarea class="form-control" id="description" rows="4" placeholder="Hvordan kan vi hjælpe dig?"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+  </div>
+</section>
 
 <!--------------
-SCRIPT BOOTSTRAP
+  SCRIPT BOOTSTRAP
 --------------->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
- </body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+</body>
 </html>
