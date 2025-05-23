@@ -14,9 +14,6 @@
 </head>
 <body>
 
-  <!-- MENU OVERLAY (for your offcanvas JS) -->
-  <div id="menuOverlay" class="menu-overlay"></div>
-
 <header>
   <!-------------------
           NAV BAR
@@ -27,9 +24,9 @@
       <!----------------
       OFFCANVAS TOGGLER (mobile only)
       ---------------->
-      <button id="menuToggle" class="btn d-lg-none" type="button"
-              data-bs-toggle="offcanvas" data-bs-target="#sideMenu"
-              aria-controls="sideMenu">
+      <button class="btn d-lg-none" type="button"
+              data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+              aria-controls="offcanvasMenu">
         <i class="bi bi-list fs-2"></i>
       </button>
 
@@ -47,14 +44,14 @@
       BRAND / LOGO
       -------------------->
       <a class="navbar-brand mx-auto mx-lg-0" href="brugerhjem.html">
-        <img src="path/to/logo.png" alt="Logo" height="40">
+        <img src="images/brugerportal/tapin white navbar.png" alt="Logo" height="50">
       </a>
 
-      <!--------------
+      <!-------------- 
       RIGHT ICONS GROUP
       --------------->
       <div class="d-flex ms-auto align-items-center">
-        <!-------
+        <!------- 
         SEARCH DROPDOWN
         -------->
         <div class="dropdown">
@@ -68,11 +65,11 @@
             </form>
           </div>
         </div>
-        <!--------------------
+        <!-------------------- 
         PROFILE PICTURE BUTTON
         ---------------------->
         <a href="profil.html" class="ms-3">
-          <img src="path/to/profile-pic.jpg" alt="Profil" height="40" class="rounded-circle">
+          <img src="images/brugerportal/profilbillede jonas.png" alt="Profil" height="40" class="rounded-circle">
         </a>
       </div>
     </div>
@@ -82,8 +79,8 @@
   OFFCANVAS MENU
   (mobile only)
   ------------>
-  <div id="sideMenu" class="offcanvas offcanvas-start d-lg-none"
-       tabindex="-1" aria-labelledby="offcanvasMenuLabel">
+  <div class="offcanvas offcanvas-start d-lg-none"
+       tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"

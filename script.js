@@ -73,11 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
         <button class="btn btn-link px-0" 
                 data-bs-toggle="collapse" 
                 data-bs-target="#comments-${post.id}">
-          Comments (${post.comments.length})
+          Comments (${(post.comments || []).length})
         </button>
         <div class="collapse mt-2" id="comments-${post.id}">
           <ul class="list-group list-group-flush" id="comments-list-${post.id}">
-            ${post.comments.map(c => `
+            ${(post.comments || []).map(c => `
               <li class="list-group-item">
                 <strong>${c.author}</strong>
                 <small class="text-muted ms-2">
@@ -96,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </form>
         </div>
       `;
+
 
       // Assemble card inner HTML
       card.innerHTML = `
