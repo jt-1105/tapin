@@ -80,7 +80,7 @@ nav.navbar {
   .btn-primary:focus {
     background-color: var(--orange) !important;
     color: var(--white) !important;
-    border-color: var(--orange) !important;
+    border-color: #e18733 !important;
   }
 }
 
