@@ -211,10 +211,7 @@ SORTIMENT.HTML CSS
 /************************************
 BARTENDERGUIDE.HTML CSS
 *************************************/
-/*oevelser.html*/
-/*opskrifter.html*/
-/*specifikeoevelser.html*/
-/*specifikeopskrifter.html*/
+
 /********************************************
   RESURSER.HTML CSS
 ********************************************/
@@ -350,7 +347,7 @@ BARTENDERGUIDE.HTML CSS
 }
 /* Outer toast: fully rounded, beige background */
 .toast-orange {
-  background-color: var(--beige) !important;
+  background-color: var(--orange) !important;
   border-radius: 0.25rem !important;
   color: #fff !important;
 }
@@ -493,5 +490,78 @@ section.goderad .goderad-list .list ul li:hover {
   line-height: 1.5;
 }
 
+/********************************************
+ PROFIL.HTML CSS
+********************************************/
 
+.container-profil { 
+  align-items: center;
+  gap: 100px;
+  margin-top: 100px;
+}
+.container-profil h1 {
+  margin-bottom: 100px;
+}
 
+.container-profilinfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin-left: 100px;
+  gap: 4rem;
+}
+
+.container-brugerinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.profil-info-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.profil-info-list li {
+  margin-top: 20px;
+}
+
+.profil-info-list li strong {
+  font-weight: bold;
+}
+
+/* ✅ Centered h1 with top margin */
+.profil-header {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 2rem;
+}
+
+/* ✅ Logout section styling */
+section.logout {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 100px;
+  margin-left: 100px; /* ⬅ left margin for large screens */
+  margin-top: 60px; /* ⬆ top margin */
+}
+
+section.logout a {
+  white-space: nowrap;
+}
+
+/* ✅ Mobile responsive adjustments */
+@media (max-width: 991.92px) {
+  .container-profilinfo {
+    flex-direction: column;
+    gap: 2rem;
+    margin-left: 10px;
+  }
+
+  section.logout {
+    justify-content: center;
+    margin-left: 0; /* remove left margin on small screens */
+    margin-top: 20px; /* add top margin */
+  }
+}
