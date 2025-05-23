@@ -2,25 +2,25 @@
   {
     "id": 1,
     "author": "Manager",
-    "content": "✨ Here’s your dummy content for post #1! ✨",
+"content": "Frederik tog førstepladsen i sidste uges salgs-konkurrence med imponerende 35 dobbelt drinks solgt!\nHan vinder et Wolt-gavekort – kæmpe tillykke! 🏆\nTak til alle der deltog – og husk: hver drink tæller!",
     "timestamp": "2025-05-13T06:10:58",
     "media": [
       {
         "type": "image",
-        "url": "https://via.placeholder.com/600x400?text=Post+1"
+        "url": "images/posts/1 salgskonkurrence.jpg"
       }
     ],
     "comments": [
       {
         "id": 1,
         "author": "Lærke",
-        "content": "This is comment #1 on post #1",
+        "content": "Kæmpe tillykke Frederik! 🎉",
         "timestamp": "2025-05-13T06:10:58"
       },
       {
         "id": 2,
         "author": "Victor",
-        "content": "This is comment #2 on post #1",
+        "content": "Godt klaret!",
         "timestamp": "2025-05-13T06:10:28"
       }
     ]
@@ -28,25 +28,25 @@
   {
     "id": 2,
     "author": "Manager",
-    "content": "✨ Here’s your dummy content for post #2! ✨",
+"content": "Denne uge kører vi en ny konkurrence – sælg flest Lux/Premium drinks!\nTanqueray, Hendrick’s, Morgan Spiced – alt tæller!\n🏆 Præmie: 2 biografbilletter til vinderne 🍿🎬\nTip: Brug spørgeteknik – “Kunne du tænke dig Hendrick’s i stedet for Gordon’s?",
     "timestamp": "2025-05-13T05:10:58",
     "media": [
       {
         "type": "image",
-        "url": "https://via.placeholder.com/600x400?text=Post+2"
+        "url": "images/posts/2 ny konkurrence.jpg"
       }
     ],
     "comments": [
       {
         "id": 1,
         "author": "Lærke",
-        "content": "This is comment #1 on post #2",
+        "content": "Jeg vinder den her uge! 💪",
         "timestamp": "2025-05-13T05:10:58"
       },
       {
         "id": 2,
         "author": "Victor",
-        "content": "This is comment #2 on post #2",
+        "content": "Nej, det gør jeg! 😎",
         "timestamp": "2025-05-13T05:10:28"
       }
     ]
@@ -54,81 +54,48 @@
   {
     "id": 3,
     "author": "Manager",
-    "content": "✨ Here’s your dummy content for post #3! ✨",
+"content": "NYX er nu i brug på Cuca! Det betyder farvel til Easy Table Booking og goddag til live-opdateringer, gæsteregistrering og digitale medlemskort 📲\nHusk at få gæster til at tilmelde sig via dit personlige link!",
     "timestamp": "2025-05-13T04:10:58",
     "media": [
       {
         "type": "image",
-        "url": "https://via.placeholder.com/600x400?text=Post+3"
-      }
-    ],
-    "comments": [
-      {
-        "id": 1,
-        "author": "Manager",
-        "content": "This is comment #1 on post #3",
-        "timestamp": "2025-05-13T04:10:58"
-      },
-      {
-        "id": 2,
-        "author": "Victor",
-        "content": "This is comment #2 on post #3",
-        "timestamp": "2025-05-13T04:10:28"
+        "url": "images/posts/nyx.png"
       }
     ]
   },
   {
     "id": 4,
     "author": "Manager",
-    "content": "✨ Here’s your dummy content for post #4! ✨",
+"content": "Har du fanget god stemning under din vagt?\nSend dine videoer til staffchatten – Magnus lægger dem op på story! 🎥💃\nVi fremhæver de bedste bidrag på vores officielle IG.",
     "timestamp": "2025-05-13T03:10:58",
-    "media": [
-      {
-        "type": "image",
-        "url": "https://via.placeholder.com/600x400?text=Post+4"
-      }
-    ],
-    "comments": [
-      {
-        "id": 1,
-        "author": "Manager",
-        "content": "This is comment #1 on post #4",
-        "timestamp": "2025-05-13T03:10:58"
-      },
-      {
-        "id": 2,
-        "author": "Victor",
-        "content": "This is comment #2 on post #4",
-        "timestamp": "2025-05-13T03:10:28"
-      }
-    ]
+    "media": []
   },
   {
     "id": 5,
     "author": "Manager",
-    "content": "✨ Here’s your dummy content for post #5! ✨",
+"content": "Cuca deltager i Rekom Cup søndag d. 15. juni kl. 14!\n⚽️ Tilmeld dig hos manageren – vi skal stille hold og kæmpe mod andre venues.\nDer er 10 kr bar og afterparty bagefter – kom og vær med! 🍻",
     "timestamp": "2025-05-13T02:10:58",
     "media": [
       {
         "type": "video",
-        "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        "url": "images/posts/vid 1.mp4"
       },
       {
         "type": "image",
-        "url": "https://via.placeholder.com/600x400?text=Post+5"
+        "url": "images/posts/rekum cup.jpg"
       }
     ],
     "comments": [
       {
         "id": 1,
         "author": "Lærke",
-        "content": "This is comment #1 on post #5",
+        "content": "Jeg er så klar til at spille! ⚽️",
         "timestamp": "2025-05-13T02:10:58"
       },
       {
         "id": 2,
         "author": "Victor",
-        "content": "This is comment #2 on post #5",
+        "content": "Øv det er på min fridag 😩",
         "timestamp": "2025-05-13T02:10:28"
       }
     ]
@@ -136,25 +103,25 @@
   {
     "id": 6,
     "author": "Manager",
-    "content": "✨ Here’s your dummy content for post #6! ✨",
+"content": "Vi tester Shaker Pineapple RTD i 8 uger 🍍\nDet er nu tilgængeligt bag baren – sælg det, smag det og kom med din vurdering.\nHvis det hitter, beholder vi det i sortimentet!",
     "timestamp": "2025-05-13T01:10:58",
     "media": [
       {
         "type": "image",
-        "url": "https://via.placeholder.com/600x400?text=Post+6"
+        "url": "images/posts/shaker_pineapple.jpg"
       }
     ],
     "comments": [
       {
         "id": 1,
         "author": "Lærke",
-        "content": "This is comment #1 on post #6",
+        "content": "Gratis druk, hlet sikekrt!",
         "timestamp": "2025-05-13T01:10:58"
       },
       {
         "id": 2,
         "author": "Victor",
-        "content": "This is comment #2 on post #6",
+        "content": "Starter tidligt med tømmermænd i dag! 🍹",
         "timestamp": "2025-05-13T01:10:28"
       }
     ]
@@ -162,27 +129,8 @@
   {
     "id": 7,
     "author": "Manager",
-    "content": "✨ Here’s your dummy content for post #7! ✨",
+"content": "NightPay-signup-konkurrencen er i gang – og du kan vinde op til 10.000 kr i bonus!\nFå gæster til at signe op med din konkurrencekode og track dine resultater.\nDet gælder frem til 6. juli – alle har en chance 💥",
     "timestamp": "2025-05-13T00:10:58",
-    "media": [
-      {
-        "type": "image",
-        "url": "https://via.placeholder.com/600x400?text=Post+7"
-      }
-    ],
-    "comments": [
-      {
-        "id": 1,
-        "author": "Lærke",
-        "content": "This is comment #1 on post #7",
-        "timestamp": "2025-05-13T00:10:58"
-      },
-      {
-        "id": 2,
-        "author": "Victor",
-        "content": "This is comment #2 on post #7",
-        "timestamp": "2025-05-13T00:10:28"
-      }
-    ]
+    "media": []
   }
 ]
