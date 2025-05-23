@@ -77,8 +77,12 @@ nav.navbar,
 }
 
 /*************************************
-  HJEM.HTML CSS
+  BRUGERHJEM.HTML CSS
 *************************************/
+.container.text-center.my-5 h1 {
+  margin-top: 50px;
+  margin-bottom: 75px;
+}
 /* Hurtiglink container*/
 .container-hurtiglink {
   display: grid;
@@ -201,7 +205,7 @@ SORTIMENT.HTML CSS
     font-size: 24px;
 }
 .pris{
-    color: var(--orange);
+    color: var(--beige);
     font-size: 24px;
 }
 /************************************
@@ -224,7 +228,7 @@ BARTENDERGUIDE.HTML CSS
 
 .title {
   margin-bottom: 2px;
-  color: var(--orange);
+  color: var(--beige);
 }
 
 .author {
@@ -469,8 +473,9 @@ section.goderad .goderad-list .list ul li:hover {
 
 #closeBtn {
   position: absolute;
-  top: 20px; right: 30px;
-  font-size: 30px;
+  top: 5px;
+  right: 10px; /* Flyt knappen længere mod højre */
+  font-size: 20px;
   color: white;
   background: transparent;
   border: none;

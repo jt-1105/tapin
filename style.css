@@ -52,17 +52,17 @@ p, li, a{
 }
 
 .btn-primary {
-    color: var(--beige);
+    color: var(--orange);
     background-color: transparent;
-    border: 2px solid var(--beige);
+    border: 2px solid var(--orange);
     border-radius: 0px;
     padding: 8px 16px;
 }
 
 .btn-primary:hover {
-    background-color: var(--beige);
+    background-color: var(--orange);
     color: white;
-    border: 2px solid #d4b297;
+    border: 2px solid #e18733;
 }
 
 /****************************
@@ -74,5 +74,5 @@ a{
 }
 
 a:hover{
-    color: var(--brown);
+    color: var(--orange);
 }
