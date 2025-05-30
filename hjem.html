@@ -109,11 +109,23 @@
           <div class="d-flex justify-content-between align-items-center">
               <a class="btn btn-primary" href="brugerhjem.html">Log In</a>
            
-              <a href="#recover" class="small">Gendan Konto</a>
+              <a href="#" class="small" onclick="visPopup()">Gendan Konto</a>
           </div>
         </form>
       </div>
     </div>
+  </div>
+</div>
+
+
+<!-------------------------
+    Gendan konto overlay
+--------------------------->
+<div id="gendanPopup" class="gendan-overlay" style="display: none;">
+  <div class="gendan-content">
+    <h2>Gendan Konto</h2>
+    <p>Henvend dig venligst til din leder for hjælp med loginoplysninger eller kontogendannelse.</p>
+    <button onclick="lukPopup()" class="btn btn-primary mt-3">Luk</button>
   </div>
 </div>
 

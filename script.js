@@ -259,3 +259,14 @@ document.querySelectorAll('button.btn-primary').forEach(btn => {
 });
 
 });
+
+
+// ──────────────────────────────────────────
+// 8) Gendan konto popup notification
+// ──────────────────────────────────────────
+function visPopup (){
+  document.getElementById("gendanPopup").style.display ="flex";
+}
+function lukPopup (){
+  document.getElementById("gendanPopup").style.display ="none";
+}
