@@ -121,11 +121,11 @@
 <!-------------------------
     Gendan konto overlay
 --------------------------->
-<div id="gendanPopup" class="gendan-overlay" style="display: none;">
-  <div class="gendan-content">
+<div id="gendanPopup" class="gendan-overlay" style="display: none;" onclick="lukPopup()">
+  <div class="gendan-content" onclick="event.stopPropagation()">
+    <button type="button" class="btn-close float-end" aria-label="Close" onclick="lukPopup()"></button>
     <h2>Gendan Konto</h2>
     <p>Henvend dig venligst til din leder for hjælp med loginoplysninger eller kontogendannelse.</p>
-    <button onclick="lukPopup()" class="btn btn-primary mt-3">Luk</button>
   </div>
 </div>
 
