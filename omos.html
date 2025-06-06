@@ -107,14 +107,29 @@
             <input type="password" class="form-control" id="loginPassword" placeholder="Password">
           </div>
           <div class="d-flex justify-content-between align-items-center">
-            <a class="btn btn-primary" href="brugerhjem.html">Log In</a>
-            <a href="#recover" class="small">Gendan Konto</a>
+              <a class="btn btn-primary" href="brugerhjem.html">Log In</a>
+           
+              <a href="#" class="small" onclick="visPopup()">Gendan Konto</a>
           </div>
         </form>
       </div>
     </div>
   </div>
 </div>
+
+
+<!-------------------------
+    Gendan konto overlay
+--------------------------->
+<div id="gendanPopup" class="gendan-overlay" style="display: none;" onclick="lukPopup()">
+  <div class="gendan-content" onclick="event.stopPropagation()">
+    <button type="button" class="btn-close float-end" aria-label="Close" onclick="lukPopup()"></button>
+    <h2>Gendan Konto</h2>
+    <p>Henvend dig venligst til din leder for hjælp med loginoplysninger eller kontogendannelse.</p>
+  </div>
+</div>
+
+
 
 <!-----
   TITEL
@@ -189,5 +204,10 @@
 --------------->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+
+<!-------
+CUSTOM JS
+-------->    
+<script src="script.js"></script>
 </body>
 </html>
