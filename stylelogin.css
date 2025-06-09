@@ -62,9 +62,9 @@ nav.navbar {
 /*“Log In” Button Styles*/
 @media (max-width: 991.98px) {
   .btn-primary {
-    background-color: var(--oranr) !important;
+    background-color: var(--orange) !important;
     color: var(--white) !important;
-    border: 2px solid var(--orange) !important;
+    border: 2px solid #e18733 !important;
   }
 }
 
